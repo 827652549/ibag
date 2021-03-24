@@ -1,7 +1,7 @@
 function NoMatch() {
   return (
     <div>
-      404
+      DIY your 404 page
     </div>
   );
 }
