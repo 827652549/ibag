@@ -1,10 +1,11 @@
+require('module-alias/register')//注册module-alias
+const fs = require('fs')
 /**
  * 指令的基类
  */
 class _instruction {
   dependenciesLists = []
   constructor () {}
-
   /**
    * 依赖关系的调用
    * @param list
@@ -32,8 +33,18 @@ class _instruction {
    * @param execFun
    */
   run = function (execFun) {
-    this.dependencies(require('./dependenciesForm.js')[this.constructor.name])
-    this.execution(execFun)
+    //引入haveExeced.json，性能优化，已经执行过的指令不再重复执行。
+    let haveExeced = JSON.parse(fs.readFileSync('./haveExeced.json','utf8'))
+    if (haveExeced.indexOf(this.constructor.name)!==-1){
+      return
+    }else {
+      haveExeced.push(this.constructor.name)
+      console.log(haveExeced)
+      fs.writeFileSync('./haveExeced.json',JSON.stringify(haveExeced),'utf8')
+      this.dependencies(require('./dependenciesForm.js')[this.constructor.name])
+      this.execution(execFun)
+    }
+
   }
 }
 

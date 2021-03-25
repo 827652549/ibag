@@ -1,3 +1,5 @@
+require('module-alias/register')//注册module-alias
+const { modify } = require('@/core/config-transform')
 /**
  * 指令【在page目录下创建页面C】
  */
@@ -6,7 +8,33 @@ class CreatePageC extends require('./_instruction') {
   constructor (props) {
     super(props)
     this.run(function () {
-      //todo 创建PageC的逻辑
+      modify(null, [
+        'output', [
+          'src',
+          [
+            'pages',
+            [
+              'C',
+              {
+                'filename': 'index',
+                'extension': 'js',
+                'context': `function C() {
+  return (
+    <div>
+      page C
+    </div>
+  );
+}
+
+export default C;
+`,
+              },
+            ],
+
+          ],
+        ],
+
+      ])
 
     })
   }

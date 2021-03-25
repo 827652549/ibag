@@ -25,7 +25,7 @@ function recovery (dir,json) {
     if (Array.isArray(e)){
       recovery(dirName,e)
     }else {
-      fs.writeFile(dirName+'/'+e.filename+'.'+e.extension,e.context,function (err) {
+      fs.writeFileSync(dirName+'/'+e.filename+'.'+e.extension,e.context,function (err) {
         if (err){
           console.warn(err)
         }else {
@@ -34,7 +34,6 @@ function recovery (dir,json) {
       })
     }
   })
-  console.log(json)
 }
 
 /**
@@ -141,7 +140,6 @@ function createFiles(filePath,json){
   //由于recovery的filePath参数和这个意义不一致，所以做个裁切
   let parentPath = filePath.substring(0,filePath.lastIndexOf('/')+1)
   recovery(parentPath,json)
-  // recovery()
 }
 
 //todo：魔改文件，最核心的逻辑，正则表达式
@@ -151,12 +149,12 @@ function changeFiles(){
 
 /**
  * 引入源目录，进行增删改为新的配置
- * 源目录路径originPath：字符串路径即可
  * 需要删除的文件deleteJson：字符串数组即可
  * 需要增加的文件createJson：使用目前的config.json版本
  * 修改文件changeJson：使用新的json
+ * 源目录路径originPath：字符串路径即可
  */
-function modify (originPath,deleteJson,createJson,changeJson){
+function modify (deleteJson,createJson,changeJson,originPath = '../output'){
   if (deleteJson){
     deleteFiles(originPath,deleteJson)
   }
