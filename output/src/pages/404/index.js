@@ -1,4 +1,4 @@
-function NoMatch() {
+function NoMatch(props) {
   return (
     <div>
       page 404

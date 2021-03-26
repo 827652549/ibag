@@ -1,3 +1,6 @@
 # Project exclude paths
 /my-app1/node_modules/
+/my-app2/node_modules/
 /node_modules/
+/output/node_modules/
+/web/tutorial-part-one/node_modules/

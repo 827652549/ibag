@@ -1,0 +1,8 @@
+[
+  "store",
+  {
+    "filename": "sagas",
+    "extension": "js",
+    "context": "import { put, takeEvery } from 'redux-saga/effects'\n\n// worker Saga : 将在 ACTION_TYPE_NAME action 被 dispatch 时调用\nfunction* fetchUser(action) {\n  yield put({type: 'ACTION_TYPE_NAME'})\n}\n\n/*\n  在每个 `ACTION_TYPE_NAME` action 被 dispatch 时调用 fetchUser\n  允许并发（译注：即同时处理多个相同的 action）\n*/\nfunction* mySaga() {\n  yield takeEvery('ACTION_TYPE_NAME', fetchUser);\n}\n\n/*\n  也可以使用 takeLatest\n\n  不允许并发，dispatch 一个 `ACTION_TYPE_NAME` action 时，\n  如果在这之前已经有一个 `ACTION_TYPE_NAME` action 在处理中，\n  那么处理中的 action 会被取消，只会执行当前的\n*/\n// function* mySaga() {\n//   yield takeLatest(\"ACTION_TYPE_NAME\", fetchUser);\n// }\n\nexport default mySaga;\n"
+  }
+]

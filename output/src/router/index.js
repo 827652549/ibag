@@ -1,3 +1,5 @@
+import { Provider } from 'react-redux'
+import store from '../store'
 import NoMatch from '../pages/404'
 import React from 'react'
 import {BrowserRouter,Route,Switch} from 'react-router-dom'
@@ -9,7 +11,8 @@ import C from '../pages/C'
 
 export default function Router() {
   return (
-    <BrowserRouter basename="/">
+    <Provider store={store}>
+      <BrowserRouter basename="/">
       <Switch>
         <Route path="/" exact component={Index}/>
         <Route path="/index"  component={Index}/>
@@ -20,5 +23,7 @@ export default function Router() {
 <Route component={NoMatch}/>
 </Switch>
     </BrowserRouter>
+</Provider>
+
   )
 }

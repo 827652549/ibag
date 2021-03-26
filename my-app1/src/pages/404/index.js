@@ -1,7 +1,7 @@
-function NoMatch() {
+function NoMatch(props) {
   return (
     <div>
-      DIY your 404 page
+      page 404
     </div>
   );
 }

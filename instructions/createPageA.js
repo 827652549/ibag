@@ -19,7 +19,7 @@ class CreatePageA extends require('./_instruction') {
               {
                 'filename': 'index',
                 'extension': 'js',
-                'context': `function A() {
+                'context': `function A(props) {
   return (
     <div>
       page A

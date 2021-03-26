@@ -6,6 +6,9 @@ const CreatePageB = require('./createPageB')
 const CreatePageC = require('./createPageC')
 const CreatePage404 = require('./createPage404')
 const ImportReactRouterDom = require('./importReactRouterDom')
+const ImportReactRedux = require('./importReactRedux')
+const ImportReduxThunk = require('./importReduxThunk')
+const ImportReduxSaga = require('./importReduxSaga')
 
 //依赖关系，属性名代表源指令，值代表依赖指令，如果需要执行源指令，需要执行依赖指令
 module.exports = {
@@ -17,5 +20,8 @@ module.exports = {
   "CreatePageB":[CreateDirPage],
   "CreatePageC":[CreateDirPage],
   "CreatePage404":[ImportReactRouterDom],
-  "ImportReactRouterDom":[CreateDirRouter,CreatePageA,CreatePageB,CreatePageC]
+  "ImportReactRouterDom":[CreateDirRouter,CreatePageA,CreatePageB,CreatePageC],
+  "ImportReactRedux":[ImportReactRouterDom],
+  "ImportReduxThunk":[ImportReactRedux],
+  "ImportReduxSaga":[ImportReactRedux],
 }

@@ -21,7 +21,7 @@ class CreatePage404 extends require('./_instruction') {
               {
                 'filename': 'index',
                 'extension': 'js',
-                'context': `function NoMatch() {
+                'context': `function NoMatch(props) {
   return (
     <div>
       page 404
