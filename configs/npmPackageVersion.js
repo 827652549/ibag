@@ -5,4 +5,6 @@ module.exports = {
   "redux-devtools-extension": "^2.13.9",
   "redux-thunk": "^2.3.0",
   "redux-saga": "^1.1.3",
+  "immutable": "^4.0.0-rc.12",
+  "redux-immutable": "^4.0.0",
 }

@@ -1,0 +1,32 @@
+require('module-alias/register')//注册module-alias
+const { modify } = require('@/core/config-transform')
+const { spliceStringContext,addStringContext,addFirstLineContext } = require('@/core/context-handle')
+const globalConfig = require('@/configs/global')
+const npmPackageVersion = require('@/configs/npmPackageVersion')
+
+/**
+ * 指令【导入redux-immutable】
+ * 依赖redux
+ */
+class ImportReduxImmutable extends require('./_instruction') {
+  //通过类名，获取到该指令依赖列表文件中到依赖指令
+  constructor (props) {
+    super(props)
+    this.run(function () {
+      spliceStringContext(
+        '../output/src/store/reducer.js',
+        'import {combineReducers} from \'redux\'',
+        'import {combineReducers} from \'redux-immutable\''
+      )
+      addStringContext(
+        '../output/package.json',
+        `"dependencies": {`,
+        'right',
+        `\n\t"redux-immutable": "${globalConfig.isAllNpmPackageVersionLatest?'*':npmPackageVersion["redux-immutable"]}",`
+      )
+    })
+  }
+}
+
+
+module.exports = ImportReduxImmutable

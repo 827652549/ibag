@@ -11,6 +11,9 @@ const ImportReactRouterDom = require('./importReactRouterDom')
 const ImportReactRedux = require('./importReactRedux')
 const ImportReduxThunk = require('./importReduxThunk')
 const ImportReduxSaga = require('./importReduxSaga')
+const ImportImmutable = require('./importImmutable')
+const ImportReduxImmutable = require('./importReduxImmutable')
+
 
 // 生成某目录：
 // require('module-alias/register')//注册module-alias
@@ -30,5 +33,8 @@ new CreatePage404()
 // new CreateDirRouter()
 // new ImportReactRouterDom()
 // new ImportReactRedux()
-new ImportReduxThunk()
-new ImportReduxSaga()
+// new ImportReduxThunk()
+// new ImportReduxSaga()
+new ImportImmutable()
+new ImportReduxImmutable()
+

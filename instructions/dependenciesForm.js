@@ -9,6 +9,8 @@ const ImportReactRouterDom = require('./importReactRouterDom')
 const ImportReactRedux = require('./importReactRedux')
 const ImportReduxThunk = require('./importReduxThunk')
 const ImportReduxSaga = require('./importReduxSaga')
+const ImportImmutable = require('./importImmutable')
+const ImportReduxImmutable = require('./importReduxImmutable')
 
 //依赖关系，属性名代表源指令，值代表依赖指令，如果需要执行源指令，需要执行依赖指令
 module.exports = {
@@ -24,4 +26,6 @@ module.exports = {
   "ImportReactRedux":[ImportReactRouterDom],
   "ImportReduxThunk":[ImportReactRedux],
   "ImportReduxSaga":[ImportReactRedux],
+  "ImportImmutable":[InitIbagReact],
+  "ImportReduxImmutable":[ImportReactRedux]
 }
