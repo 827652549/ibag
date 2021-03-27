@@ -1,4 +1,8 @@
-const {recovery} = require('@/core/config-transform')
+require('module-alias/register')//注册module-alias
+const { modify } = require('@/core/config-transform')
+const { spliceStringContext,addStringContext,addFirstLineContext } = require('@/core/context-handle')
+const globalConfig = require('@/configs/global')
+const npmPackageVersion = require('@/configs/npmPackageVersion')
 
 const createJson = [
   "output",
@@ -10,7 +14,7 @@ const createJson = [
   {
     "filename": "package",
     "extension": "json",
-    "context": "{\n  \"name\": \"ibag-project\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"dependencies\": {\n    \"@testing-library/react\": \"^11.1.0\",\n    \"@testing-library/user-event\": \"^12.1.10\",\n    \"react\": \"^17.0.1\",\n    \"react-dom\": \"^17.0.1\",\n    \"react-scripts\": \"4.0.3\"\n  },\n  \"scripts\": {\n    \"start\": \"react-scripts start\",\n    \"build\": \"react-scripts build\",\n    \"test\": \"react-scripts test\",\n    \"eject\": \"react-scripts eject\"\n  },\n  \"eslintConfig\": {\n    \"extends\": [\n      \"react-app\",\n      \"react-app/jest\"\n    ]\n  },\n  \"browserslist\": {\n    \"production\": [\n      \">0.2%\",\n      \"not dead\",\n      \"not op_mini all\"\n    ],\n    \"development\": [\n      \"last 1 chrome version\",\n      \"last 1 firefox version\",\n      \"last 1 safari version\"\n    ]\n  }\n}\n"
+    "context": "{\n  \"name\": \"ibag-project\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"dependencies\": {\n      },\n  \"scripts\": {\n    \"start\": \"react-scripts start\",\n    \"build\": \"react-scripts build\",\n    \"test\": \"react-scripts test\",\n    \"eject\": \"react-scripts eject\"\n  },\n  \"eslintConfig\": {\n    \"extends\": [\n      \"react-app\"\n    ]\n  },\n  \"browserslist\": {\n    \"production\": [\n      \">0.2%\",\n      \"not dead\",\n      \"not op_mini all\"\n    ],\n    \"development\": [\n      \"last 1 chrome version\",\n      \"last 1 firefox version\",\n      \"last 1 safari version\"\n    ]\n  }\n}\n"
   },
   [
     "public",
@@ -58,7 +62,15 @@ class InitIbagReact extends require('./_instruction') {
   constructor (props) {
     super(props)
     this.run(function () {
-      recovery('../',createJson)
+      modify(null,createJson)
+      addStringContext(
+        '../output/package.json',
+        `"dependencies": {`,
+        'right',
+        `\n\t"react": "${globalConfig.isAllNpmPackageVersionLatest?'*':npmPackageVersion["react"]}",
+        "react-dom": "${globalConfig.isAllNpmPackageVersionLatest?'*':npmPackageVersion["react-dom"]}",
+        "react-scripts": "${globalConfig.isAllNpmPackageVersionLatest?'*':npmPackageVersion["react-scripts"]}"`
+      )
     })
   }
 }

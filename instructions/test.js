@@ -24,17 +24,20 @@ const ImportReduxImmutable = require('./importReduxImmutable')
 
 //测试，要看到依赖项的依次调用
 
-// new CreatePageA()
-// new CreatePageB()
-// new CreatePageC()
+//公共
+new CreateDirPage()
+
+//React项目
+new CreatePageA()
+new CreatePageB()
+new CreatePageC()
 new CreatePage404()
-// new InitIbagReact()
-// new CreateDirPage()
-// new CreateDirRouter()
-// new ImportReactRouterDom()
-// new ImportReactRedux()
-// new ImportReduxThunk()
-// new ImportReduxSaga()
+new InitIbagReact()
+new CreateDirRouter()
+new ImportReactRouterDom()
+new ImportReactRedux()
+new ImportReduxThunk()
+new ImportReduxSaga()
 new ImportImmutable()
 new ImportReduxImmutable()
 

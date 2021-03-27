@@ -7,4 +7,7 @@ module.exports = {
   "redux-saga": "^1.1.3",
   "immutable": "^4.0.0-rc.12",
   "redux-immutable": "^4.0.0",
+  "react": "^17.0.1",
+  "react-dom": "^17.0.1",
+  "react-scripts": "4.0.3"
 }
