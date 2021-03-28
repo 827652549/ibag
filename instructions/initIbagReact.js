@@ -67,9 +67,9 @@ class InitIbagReact extends require('./_instruction') {
         '../output/package.json',
         `"dependencies": {`,
         'right',
-        `\n\t"react": "${globalConfig.isAllNpmPackageVersionLatest?'*':npmPackageVersion["react"]}",
-        "react-dom": "${globalConfig.isAllNpmPackageVersionLatest?'*':npmPackageVersion["react-dom"]}",
-        "react-scripts": "${globalConfig.isAllNpmPackageVersionLatest?'*':npmPackageVersion["react-scripts"]}"`
+        `\n\t"react": "${npmPackageVersion["react"]}",
+        "react-dom": "${npmPackageVersion["react-dom"]}",
+        "react-scripts": "${npmPackageVersion["react-scripts"]}"`
       )
     })
   }

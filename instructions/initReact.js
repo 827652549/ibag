@@ -6,7 +6,7 @@ class InitReact extends require('./_instruction') {
   constructor (props) {
     super(props)
     this.run(function () {
-      //todo 创建InitReact的逻辑
+      //todo 创建InitReact的逻辑，保证和其他指令不冲突
     })
   }
 }

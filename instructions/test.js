@@ -1,4 +1,8 @@
 const fs = require('fs')
+const globalConfig = require('../configs/global')
+const ncu = require('npm-check-updates')
+// const children_process
+const child_process = require('child_process')
 
 const CreatePageA = require('./createPageA')
 const CreatePageB = require('./createPageB')
@@ -14,7 +18,6 @@ const ImportReduxSaga = require('./importReduxSaga')
 const ImportImmutable = require('./importImmutable')
 const ImportReduxImmutable = require('./importReduxImmutable')
 
-
 // 生成某目录：
 // require('module-alias/register')//注册module-alias
 // const { directory2json } = require('@/core/config-transform')
@@ -22,7 +25,8 @@ const ImportReduxImmutable = require('./importReduxImmutable')
 // fs.writeFileSync('./config.json',JSON.stringify(outJson))
 // console.log(outJson)
 
-//测试，要看到依赖项的依次调用
+//todo：(一)生成package.json
+
 
 //公共
 new CreateDirPage()
@@ -41,3 +45,30 @@ new ImportReduxSaga()
 new ImportImmutable()
 new ImportReduxImmutable()
 
+// console.log(child_process.execSync('npm i'))
+
+const upgraded = async ()=>{
+  console.log('npm依赖包更新到最新版：',await ncu.run({
+    packageFile:'../output/package.json',
+    upgrade:true,
+    // Pass any cli option.
+    // Defaults:
+    jsonUpgraded: true,
+    silent: true
+  }))
+}
+
+const run = (globalConfig,fun)=>{
+  //判断Global到全局*配置
+  if (!globalConfig.isAllNpmPackageVersionLatest){
+    upgraded().then(fun)
+  }else {
+    fun()
+  }
+}
+
+//todo：初始化packege.json之后需要做的事情
+run(globalConfig,function () {
+  //todo:运行更新完依赖后，需要做的事情：如
+  console.log('ibag已为您创建好您的初始化项目。')
+})

@@ -1,7 +1,6 @@
 require('module-alias/register')//注册module-alias
 const { modify } = require('@/core/config-transform')
 const { spliceStringContext,addStringContext,addFirstLineContext } = require('@/core/context-handle')
-const globalConfig = require('@/configs/global')
 const npmPackageVersion = require('@/configs/npmPackageVersion')
 
 /**
@@ -22,7 +21,7 @@ class ImportReduxImmutable extends require('./_instruction') {
         '../output/package.json',
         `"dependencies": {`,
         'right',
-        `\n\t"redux-immutable": "${globalConfig.isAllNpmPackageVersionLatest?'*':npmPackageVersion["redux-immutable"]}",`
+        `\n\t"redux-immutable": "${npmPackageVersion["redux-immutable"]}",`
       )
     })
   }

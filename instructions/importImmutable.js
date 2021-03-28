@@ -1,6 +1,5 @@
 require('module-alias/register')//注册module-alias
 const { addStringContext } = require('@/core/context-handle')
-const globalConfig = require('@/configs/global')
 const npmPackageVersion = require('@/configs/npmPackageVersion')
 
 /**
@@ -14,7 +13,7 @@ class ImportImmutable extends require('./_instruction') {
         '../output/package.json',
         `"dependencies": {`,
         'right',
-        `\n\t"immutable": "${globalConfig.isAllNpmPackageVersionLatest?'*':npmPackageVersion["immutable"]}",`
+        `\n\t"immutable": "${npmPackageVersion["immutable"]}",`
       )
     })
   }

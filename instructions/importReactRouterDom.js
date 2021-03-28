@@ -70,7 +70,7 @@ export default function Router() {
           '../output/package.json',
           `"dependencies": {`,
           'right',
-          `\n\t"react-router-dom": "${globalConfig.isAllNpmPackageVersionLatest?'*':npmPackageVersion["react-router-dom"]}",`
+          `\n\t"react-router-dom": "${npmPackageVersion['react-router-dom']}",`
       )
       addStringContext(
         '../output/src/App.js',

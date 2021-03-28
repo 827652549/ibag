@@ -1,7 +1,5 @@
 require('module-alias/register')//注册module-alias
-const { modify } = require('@/core/config-transform')
-const { spliceStringContext,addStringContext,addFirstLineContext } = require('@/core/context-handle')
-const globalConfig = require('@/configs/global')
+const { addStringContext,addFirstLineContext } = require('@/core/context-handle')
 const npmPackageVersion = require('@/configs/npmPackageVersion')
 
 /**
@@ -27,7 +25,7 @@ class ImportReduxThunk extends require('./_instruction') {
         '../output/package.json',
         `"dependencies": {`,
         'right',
-        `\n\t"redux-thunk": "${globalConfig.isAllNpmPackageVersionLatest?'*':npmPackageVersion["redux-thunk"]}",`
+        `\n\t"redux-thunk": "${npmPackageVersion["redux-thunk"]}",`
       )
     })
   }

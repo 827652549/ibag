@@ -1,7 +1,6 @@
 require('module-alias/register')//注册module-alias
 const { modify } = require('@/core/config-transform')
 const { spliceStringContext,addStringContext,addFirstLineContext } = require('@/core/context-handle')
-const globalConfig = require('@/configs/global')
 const npmPackageVersion = require('@/configs/npmPackageVersion')
 
 const addDirGlobalStore = ["store",{"filename":"index","extension":"js","context":"import {createStore,applyMiddleware} from 'redux';\nimport { composeWithDevTools } from 'redux-devtools-extension';\nimport reducer from './reducer';\nconst store= createStore(reducer,composeWithDevTools(\n  applyMiddleware()\n));\n\nexport default store;\n"},{"filename":"reducer","extension":"js","context":"import {reducer as ReducerA} from '../pages/A/store';\nimport {reducer as ReducerB} from '../pages/B/store';\nimport {reducer as ReducerC} from '../pages/C/store';\nimport {combineReducers} from 'redux';\n\nexport default combineReducers({\n  ReducerA,\n  ReducerB,\n  ReducerC\n});\n"}]
@@ -56,9 +55,9 @@ import store from '../store'\n`
           '../output/package.json',
           `"dependencies": {`,
           'right',
-          `\n\t"redux": "${globalConfig.isAllNpmPackageVersionLatest?'*':npmPackageVersion["redux"]}",
-    "react-redux": "${globalConfig.isAllNpmPackageVersionLatest?'*':npmPackageVersion["react-redux"]}",
-    "redux-devtools-extension": "${globalConfig.isAllNpmPackageVersionLatest?'*':npmPackageVersion["redux-devtools-extension"]}",`
+          `\n\t"redux": "${npmPackageVersion['redux']}",
+    "react-redux": "${npmPackageVersion["react-redux"]}",
+    "redux-devtools-extension": "${npmPackageVersion["redux-devtools-extension"]}",`
       )
     })
   }
