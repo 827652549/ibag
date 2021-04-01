@@ -34,13 +34,13 @@ class _instruction {
    */
   run = function (execFun) {
     //引入haveExeced.json，性能优化，已经执行过的指令不再重复执行。
-    let haveExeced = JSON.parse(fs.readFileSync('./haveExeced.json','utf8'))
+    let haveExeced = JSON.parse(fs.readFileSync('./_haveExeced.json','utf8'))
     if (haveExeced.indexOf(this.constructor.name)!==-1){
       return
     }else {
       haveExeced.push(this.constructor.name)
       console.log(haveExeced)
-      fs.writeFileSync('./haveExeced.json',JSON.stringify(haveExeced),'utf8')
+      fs.writeFileSync('./_haveExeced.json',JSON.stringify(haveExeced),'utf8')
       this.dependencies(require('./dependenciesForm.js')[this.constructor.name])
       this.execution(execFun)
     }

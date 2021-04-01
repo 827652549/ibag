@@ -22,7 +22,7 @@ class ImportBabelForVue extends require('./_instruction') {
       modify(null,createFile)
       addStringContext(
         '../output/package.json',
-        `"dependencies": {`,
+        `"devDependencies": {`,
         'right',
         `\n\t"@vue/cli-plugin-babel": "${npmPackageVersion["@vue/cli-plugin-babel"]}",`
       )

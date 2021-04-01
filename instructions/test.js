@@ -52,14 +52,14 @@ console.log(outJson)
 // new ImportReduxSaga()
 // new ImportImmutable()
 // new ImportReduxImmutable()
-new ImportEslintForReact()
+// new ImportEslintForReact()
 
 
 //Vue项目
-// new InitIbagVue()
-// new ImportVueRouter()
-// new ImportBabelForVue()
-// new ImportEslintForVue()
+new InitIbagVue()
+new ImportVueRouter()
+new ImportBabelForVue()
+new ImportEslintForVue()
 
 // console.log(child_process.execSync('npm i'))
 

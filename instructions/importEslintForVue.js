@@ -13,7 +13,7 @@ class ImportEslintForVue extends require('./_instruction') {
     this.run(function () {
       addStringContext(
         '../output/package.json',
-        `"dependencies": {`,
+        `"devDependencies": {`,
         'right',
         `\n\t"@vue/cli-plugin-eslint": "${npmPackageVersion["@vue/cli-plugin-eslint"]}",
 \t"babel-eslint": "${npmPackageVersion["babel-eslint"]}",
