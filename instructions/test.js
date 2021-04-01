@@ -23,13 +23,14 @@ const InitIbagVue = require('./initIbagVue')
 const ImportVueRouter = require('./importVueRouter')
 const ImportBabelForVue = require('./importBabelForVue')
 const ImportEslintForVue = require('./importEslintForVue')
+const ImportVuex = require('./importVuex')
 
 
 
 // 生成某目录：
 require('module-alias/register')//注册module-alias
 const { directory2json } = require('@/core/config-transform')
-let outJson = directory2json('../my-vue-app2')
+let outJson = directory2json('../my-vue-app-vuex')
 fs.writeFileSync('./config.json',JSON.stringify(outJson))
 console.log(outJson)
 
@@ -52,7 +53,7 @@ console.log(outJson)
 // new ImportReduxSaga()
 // new ImportImmutable()
 // new ImportReduxImmutable()
-new ImportEslintForReact()
+// new ImportEslintForReact()
 
 
 //Vue项目
@@ -60,6 +61,7 @@ new ImportEslintForReact()
 // new ImportVueRouter()
 // new ImportBabelForVue()
 // new ImportEslintForVue()
+new ImportVuex()
 
 // console.log(child_process.execSync('npm i'))
 

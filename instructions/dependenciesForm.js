@@ -17,6 +17,7 @@ const InitIbagVue = require('./initIbagVue')
 const ImportVueRouter = require('./importVueRouter')
 const ImportBabelForVue = require('./importBabelForVue')
 const ImportEslintForVue = require('./importEslintForVue')
+const ImportVuex = require('./importVuex')
 
 
 
@@ -43,5 +44,5 @@ module.exports = {
   "ImportVueRouter":[InitIbagVue],
   "ImportBabelForVue":[InitIbagVue],
   "ImportEslintForVue":[InitIbagVue],
-
+  "ImportVuex":[InitIbagVue],
 }
