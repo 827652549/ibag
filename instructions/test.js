@@ -37,29 +37,29 @@ console.log(outJson)
 
 
 //公共
-// new CreateDirPage()
-//
-// //React项目
-// new CreatePageA()
-// new CreatePageB()
-// new CreatePageC()
-// new CreatePage404()
-// new InitIbagReact()
-// new CreateDirRouter()
-// new ImportReactRouterDom()
-// new ImportReactRedux()
-// new ImportReduxThunk()
-// new ImportReduxSaga()
-// new ImportImmutable()
-// new ImportReduxImmutable()
-// new ImportEslintForReact()
+new CreateDirPage()
+
+//React项目
+new CreatePageA()
+new CreatePageB()
+new CreatePageC()
+new CreatePage404()
+new InitIbagReact()
+new CreateDirRouter()
+new ImportReactRouterDom()
+new ImportReactRedux()
+new ImportReduxThunk()
+new ImportReduxSaga()
+new ImportImmutable()
+new ImportReduxImmutable()
+new ImportEslintForReact()
 
 
 //Vue项目
-new InitIbagVue()
-new ImportVueRouter()
-new ImportBabelForVue()
-new ImportEslintForVue()
+// new InitIbagVue()
+// new ImportVueRouter()
+// new ImportBabelForVue()
+// new ImportEslintForVue()
 
 // console.log(child_process.execSync('npm i'))
 

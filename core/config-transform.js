@@ -63,9 +63,10 @@ function directory2json (filePath) {
     const stats = fs.statSync(filedir)
     //如果是文件
     if (stats.isFile()) {
+      const name = filename.split('.')[0]
       json.push({
-        filename: filename.split('.')[0],
-        extension: filename.split('.')[1],
+        filename: name,
+        extension: filename.substring(filename.indexOf(name)+name.length),
         context: fs.readFileSync(filedir, 'utf-8'),
       })
     } else {
@@ -104,31 +105,6 @@ function deleteFiles(filePath,json){
     console.warn(`deleteFiles函数的传入路径和表示删除的json配置不符\n${filePath}\n${JSON.stringify(json)}`)
     return
   }
-//   //init json
-//   const json = [strs]
-//   //根据文件路径读取文件，返回文件列表
-//   const files = fs.readdirSync(filePath)
-//   files.forEach(function (filename) {
-//     //忽略的文件
-//     if (ignoreFile.includes(filename)){
-//       return
-//     }
-//     //获取当前文件的绝对路径
-//     let filedir = path.join(filePath, filename)
-//     //根据绝对路径获取文件信息
-//     const stats = fs.statSync(filedir)
-//     //如果是文件
-//     if (stats.isFile()) {
-//       json.push({
-//         filename: filename.split('.')[0],
-//         extension: filename.split('.')[1],
-//         context: fs.readFileSync(filedir, 'utf-8'),
-//       })
-//     } else {
-//       json.push(directory2json(filedir))
-//     }
-//   })
-//   return json
 }
 
 /**
