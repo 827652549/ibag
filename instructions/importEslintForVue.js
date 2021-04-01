@@ -42,7 +42,7 @@ class ImportEslintForVue extends require('./_instruction') {
       addStringContext(
         '../output/package.json',
         `"scripts": {`,
-        'righr',
+        'right',
         `\n\t"lint": "vue-cli-service lint",`
       )
     })

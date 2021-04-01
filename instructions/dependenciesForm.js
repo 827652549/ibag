@@ -11,6 +11,7 @@ const ImportReduxThunk = require('./importReduxThunk')
 const ImportReduxSaga = require('./importReduxSaga')
 const ImportImmutable = require('./importImmutable')
 const ImportReduxImmutable = require('./importReduxImmutable')
+const ImportEslintForReact = require('./importEslintForReact')
 
 const InitIbagVue = require('./initIbagVue')
 const ImportVueRouter = require('./importVueRouter')
@@ -35,6 +36,8 @@ module.exports = {
   "ImportReduxSaga":[ImportReactRedux],
   "ImportImmutable":[InitIbagReact],
   "ImportReduxImmutable":[ImportReactRedux],
+  "ImportEslintForReact":[InitIbagReact],
+
 
   "InitIbagVue":[],
   "ImportVueRouter":[InitIbagVue],

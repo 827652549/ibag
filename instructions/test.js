@@ -17,6 +17,7 @@ const ImportReduxThunk = require('./importReduxThunk')
 const ImportReduxSaga = require('./importReduxSaga')
 const ImportImmutable = require('./importImmutable')
 const ImportReduxImmutable = require('./importReduxImmutable')
+const ImportEslintForReact = require('./importEslintForReact')
 
 const InitIbagVue = require('./initIbagVue')
 const ImportVueRouter = require('./importVueRouter')
@@ -37,8 +38,8 @@ console.log(outJson)
 
 //公共
 // new CreateDirPage()
-
-//React项目
+//
+// //React项目
 // new CreatePageA()
 // new CreatePageB()
 // new CreatePageC()
@@ -51,13 +52,14 @@ console.log(outJson)
 // new ImportReduxSaga()
 // new ImportImmutable()
 // new ImportReduxImmutable()
+new ImportEslintForReact()
 
 
 //Vue项目
 // new InitIbagVue()
 // new ImportVueRouter()
 // new ImportBabelForVue()
-new ImportEslintForVue()
+// new ImportEslintForVue()
 
 // console.log(child_process.execSync('npm i'))
 

@@ -5,3 +5,5 @@
 /node_modules/
 /output/node_modules/
 /web/tutorial-part-one/node_modules/
+
+node_modules
