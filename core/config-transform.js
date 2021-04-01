@@ -66,7 +66,7 @@ function directory2json (filePath) {
       const name = filename.split('.')[0]
       json.push({
         filename: name,
-        extension: filename.substring(filename.indexOf(name)+name.length),
+        extension: filename.substring(filename.indexOf(name)+name.length+1),
         context: fs.readFileSync(filedir, 'utf-8'),
       })
     } else {
