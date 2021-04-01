@@ -37,21 +37,21 @@ console.log(outJson)
 
 
 //公共
-new CreateDirPage()
+// new CreateDirPage()
 
 //React项目
-new CreatePageA()
-new CreatePageB()
-new CreatePageC()
-new CreatePage404()
-new InitIbagReact()
-new CreateDirRouter()
-new ImportReactRouterDom()
-new ImportReactRedux()
-new ImportReduxThunk()
-new ImportReduxSaga()
-new ImportImmutable()
-new ImportReduxImmutable()
+// new CreatePageA()
+// new CreatePageB()
+// new CreatePageC()
+// new CreatePage404()
+// new InitIbagReact()
+// new CreateDirRouter()
+// new ImportReactRouterDom()
+// new ImportReactRedux()
+// new ImportReduxThunk()
+// new ImportReduxSaga()
+// new ImportImmutable()
+// new ImportReduxImmutable()
 new ImportEslintForReact()
 
 

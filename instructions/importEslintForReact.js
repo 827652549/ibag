@@ -12,14 +12,12 @@ class ImportEslintForReact extends require('./_instruction') {
     this.run(function () {
       addStringContext(
         '../output/package.json',
-        `"browserslist": [`,
-        'left',
-        `"devDependencies": {
-    "babel-eslint": "${npmPackageVersion["babel-eslint"]}",
-    "eslint": "${npmPackageVersion["eslint"]}",
-    "eslint-plugin-import": "${npmPackageVersion["eslint-plugin-import"]}",
-    "eslint-plugin-react": "${npmPackageVersion["eslint-plugin-react"]}"
-  }\n`
+        `"devDependencies": {`,
+        'right',
+        `\n\t"babel-eslint": "${npmPackageVersion["babel-eslint"]}",
+    \t"eslint": "${npmPackageVersion["eslint"]}",
+    \t"eslint-plugin-import": "${npmPackageVersion["eslint-plugin-import"]}",
+    \t"eslint-plugin-react": "${npmPackageVersion["eslint-plugin-react"]}"\n`
       )
       spliceStringContext(
         '../output/package.json',
