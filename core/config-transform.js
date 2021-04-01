@@ -93,12 +93,12 @@ function deleteFiles(filePath,json){
           deleteFiles(filePath+'/'+json[i][0],json[i])
         }else {
           console.log('delete文件: '+filePath+'/'+json[i].filename+'.'+json[i].extension)
-          del.sync([filePath+'/'+json[i].filename+'.'+json[i].extension]);
+          del.sync([filePath+'/'+json[i].filename+'.'+json[i].extension],{force:true});
         }
       }
     }else {
       console.log('delete目录: '+filePath)
-      del.sync([filePath]);
+      del.sync([filePath],{force:true});
     }
   }else {
     console.warn(`deleteFiles函数的传入路径和表示删除的json配置不符\n${filePath}\n${JSON.stringify(json)}`)

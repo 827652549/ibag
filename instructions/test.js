@@ -18,10 +18,13 @@ const ImportReduxSaga = require('./importReduxSaga')
 const ImportImmutable = require('./importImmutable')
 const ImportReduxImmutable = require('./importReduxImmutable')
 
+const InitIbagVue = require('./initIbagVue')
+const ImportVueRouter = require('./importVueRouter')
+
 // 生成某目录：
 // require('module-alias/register')//注册module-alias
 // const { directory2json } = require('@/core/config-transform')
-// let outJson = directory2json('../my-app1/src/store')
+// let outJson = directory2json('../my-vue-app-router/src')
 // fs.writeFileSync('./config.json',JSON.stringify(outJson))
 // console.log(outJson)
 
@@ -29,24 +32,33 @@ const ImportReduxImmutable = require('./importReduxImmutable')
 
 
 //公共
-new CreateDirPage()
+// new CreateDirPage()
 
 //React项目
-new CreatePageA()
-new CreatePageB()
-new CreatePageC()
-new CreatePage404()
-new InitIbagReact()
-new CreateDirRouter()
-new ImportReactRouterDom()
-new ImportReactRedux()
-new ImportReduxThunk()
-new ImportReduxSaga()
-new ImportImmutable()
-new ImportReduxImmutable()
+// new CreatePageA()
+// new CreatePageB()
+// new CreatePageC()
+// new CreatePage404()
+// new InitIbagReact()
+// new CreateDirRouter()
+// new ImportReactRouterDom()
+// new ImportReactRedux()
+// new ImportReduxThunk()
+// new ImportReduxSaga()
+// new ImportImmutable()
+// new ImportReduxImmutable()
+
+
+//Vue项目
+new InitIbagVue()
+new ImportVueRouter()
 
 // console.log(child_process.execSync('npm i'))
 
+/**
+ * 将npm依赖包更新到最新版
+ * @returns {Promise<void>}
+ */
 const upgraded = async ()=>{
   console.log('npm依赖包更新到最新版：',await ncu.run({
     packageFile:'../output/package.json',
@@ -60,7 +72,7 @@ const upgraded = async ()=>{
 
 const run = (globalConfig,fun)=>{
   //判断Global到全局*配置
-  if (!globalConfig.isAllNpmPackageVersionLatest){
+  if (globalConfig.isAllNpmPackageVersionLatest){
     upgraded().then(fun)
   }else {
     fun()

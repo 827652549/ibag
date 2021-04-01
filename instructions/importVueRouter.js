@@ -1,4 +1,9 @@
-[
+require('module-alias/register')//注册module-alias
+const { modify } = require('@/core/config-transform')
+const { addStringContext,addFirstLineContext } = require('@/core/context-handle')
+const npmPackageVersion = require('@/configs/npmPackageVersion')
+
+const createJson = [
   "src",
   {
     "filename": "App",
@@ -41,3 +46,49 @@
     }
   ]
 ]
+/**
+ * 指令【导入vue-router】
+ */
+class ImportVueRouter extends require('./_instruction') {
+  constructor (props) {
+    super(props)
+    this.run(function () {
+      modify([
+        'output',
+        [
+          'src',
+          {
+            "filename": "App",
+            "extension": "vue"
+          }
+        ]
+      ], [
+        'output', createJson,
+      ])
+      addFirstLineContext(
+        '../output/src/main.js',
+        `import router from './router'\n`
+      )
+      addStringContext(
+        '../output/src/main.js',
+        `new Vue({`,
+        'right',
+        `\n\trouter,`
+      )
+      addStringContext(
+          '../output/package.json',
+          `"dependencies": {`,
+          'right',
+          `\n\t"vue-router": "${npmPackageVersion['vue-router']}",`
+      )
+      addStringContext(
+        '../output/package.json',
+        `"devDependencies": {`,
+        'right',
+        `\n\t"@vue/cli-plugin-router": "${npmPackageVersion['@vue/cli-plugin-router']}",`
+      )
+    })
+  }
+}
+
+module.exports = ImportVueRouter

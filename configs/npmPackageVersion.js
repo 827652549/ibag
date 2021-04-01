@@ -9,5 +9,7 @@ module.exports = {
   "redux-immutable": "^4.0.0",
   "react": "^17.0.1",
   "react-dom": "^17.0.1",
-  "react-scripts": "4.0.3"
+  "react-scripts": "4.0.3",
+  "vue-router": "^3.2.0",
+  "@vue/cli-plugin-router": "~4.5.0",
 }
