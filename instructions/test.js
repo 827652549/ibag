@@ -20,13 +20,15 @@ const ImportReduxImmutable = require('./importReduxImmutable')
 
 const InitIbagVue = require('./initIbagVue')
 const ImportVueRouter = require('./importVueRouter')
+const ImportBabelForVue = require('./importBabelForVue')
+
 
 // 生成某目录：
-// require('module-alias/register')//注册module-alias
-// const { directory2json } = require('@/core/config-transform')
-// let outJson = directory2json('../my-vue-app-router/src')
-// fs.writeFileSync('./config.json',JSON.stringify(outJson))
-// console.log(outJson)
+require('module-alias/register')//注册module-alias
+const { directory2json } = require('@/core/config-transform')
+let outJson = directory2json('../my-vue-app2')
+fs.writeFileSync('./config.json',JSON.stringify(outJson))
+console.log(outJson)
 
 //todo：(一)生成package.json
 
@@ -50,8 +52,9 @@ const ImportVueRouter = require('./importVueRouter')
 
 
 //Vue项目
-new InitIbagVue()
-new ImportVueRouter()
+// new InitIbagVue()
+// new ImportVueRouter()
+new ImportBabelForVue()
 
 // console.log(child_process.execSync('npm i'))
 

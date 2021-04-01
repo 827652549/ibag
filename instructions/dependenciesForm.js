@@ -14,6 +14,7 @@ const ImportReduxImmutable = require('./importReduxImmutable')
 
 const InitIbagVue = require('./initIbagVue')
 const ImportVueRouter = require('./importVueRouter')
+const ImportBabelForVue = require('./importBabelForVue')
 
 
 
@@ -36,5 +37,6 @@ module.exports = {
 
   "InitIbagVue":[],
   "ImportVueRouter":[InitIbagVue],
+  "ImportBabelForVue":[InitIbagVue],
 
 }

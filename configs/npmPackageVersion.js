@@ -12,4 +12,5 @@ module.exports = {
   "react-scripts": "4.0.3",
   "vue-router": "^3.2.0",
   "@vue/cli-plugin-router": "~4.5.0",
+  "@vue/cli-plugin-babel": "~4.5.0",
 }
