@@ -13,4 +13,8 @@ module.exports = {
   "vue-router": "^3.2.0",
   "@vue/cli-plugin-router": "~4.5.0",
   "@vue/cli-plugin-babel": "~4.5.0",
+  "@vue/cli-plugin-eslint": "~4.5.0",
+  "babel-eslint": "^10.1.0",
+  "eslint": "^6.7.2",
+  "eslint-plugin-vue": "^6.2.2",
 }

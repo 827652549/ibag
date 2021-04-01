@@ -21,6 +21,8 @@ const ImportReduxImmutable = require('./importReduxImmutable')
 const InitIbagVue = require('./initIbagVue')
 const ImportVueRouter = require('./importVueRouter')
 const ImportBabelForVue = require('./importBabelForVue')
+const ImportEslintForVue = require('./importEslintForVue')
+
 
 
 // 生成某目录：
@@ -54,7 +56,8 @@ console.log(outJson)
 //Vue项目
 // new InitIbagVue()
 // new ImportVueRouter()
-new ImportBabelForVue()
+// new ImportBabelForVue()
+new ImportEslintForVue()
 
 // console.log(child_process.execSync('npm i'))
 
