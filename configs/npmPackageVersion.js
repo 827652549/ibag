@@ -23,4 +23,6 @@ module.exports = {
   "vuex": "^3.4.0",
   "bootstrap": "^4.6.0",
   "react-bootstrap": "^1.5.2",
+  "bootstrap-vue": "^2.21.2",
+
 }

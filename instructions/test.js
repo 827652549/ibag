@@ -25,6 +25,8 @@ const ImportVueRouter = require('./importVueRouter')
 const ImportBabelForVue = require('./importBabelForVue')
 const ImportEslintForVue = require('./importEslintForVue')
 const ImportVuex = require('./importVuex')
+const ImportBootstrapForVue = require('./importBootstrapForVue')
+
 
 
 
@@ -55,15 +57,16 @@ const ImportVuex = require('./importVuex')
 // new ImportImmutable()
 // new ImportReduxImmutable()
 // new ImportEslintForReact()
-new ImportBootstrapForReact()
+// new ImportBootstrapForReact()
 
 
 //Vue项目
-// new InitIbagVue()
-// new ImportVueRouter()
-// new ImportBabelForVue()
-// new ImportEslintForVue()
-// new ImportVuex()
+new InitIbagVue()
+new ImportVueRouter()
+new ImportBabelForVue()
+new ImportEslintForVue()
+new ImportVuex()
+new ImportBootstrapForVue()
 
 // console.log(child_process.execSync('npm i'))
 
@@ -96,3 +99,4 @@ run(globalConfig,function () {
   //todo:运行更新完依赖后，需要做的事情：如
   console.log('ibag已为您创建好您的初始化项目。')
 })
+

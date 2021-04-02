@@ -19,6 +19,7 @@ const ImportBabelForVue = require('./importBabelForVue')
 const ImportEslintForVue = require('./importEslintForVue')
 const ImportVuex = require('./importVuex')
 const ImportBootstrapForReact = require('./importBootstrapForReact')
+const ImportBootstrapForVue = require('./importBootstrapForVue')
 
 
 
@@ -47,4 +48,5 @@ module.exports = {
   "ImportBabelForVue":[InitIbagVue],
   "ImportEslintForVue":[InitIbagVue],
   "ImportVuex":[InitIbagVue],
+  "ImportBootstrapForVue":[InitIbagVue],
 }

@@ -4,7 +4,7 @@ const { spliceStringContext,addStringContext,addFirstLineContext } = require('@/
 const npmPackageVersion = require('@/configs/npmPackageVersion')
 
 /**
- * 指令【为react导入bootstrap、bootstrap和react-bootstrap】
+ * 指令【为react导入bootstrap和react-bootstrap】
  */
 class ImportBootstrapForReact extends require('./_instruction') {
   constructor (props) {
