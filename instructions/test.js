@@ -18,6 +18,7 @@ const ImportReduxSaga = require('./importReduxSaga')
 const ImportImmutable = require('./importImmutable')
 const ImportReduxImmutable = require('./importReduxImmutable')
 const ImportEslintForReact = require('./importEslintForReact')
+const ImportBootstrapForReact = require('./importBootstrapForReact')
 
 const InitIbagVue = require('./initIbagVue')
 const ImportVueRouter = require('./importVueRouter')
@@ -28,19 +29,19 @@ const ImportVuex = require('./importVuex')
 
 
 // 生成某目录：
-require('module-alias/register')//注册module-alias
-const { directory2json } = require('@/core/config-transform')
-let outJson = directory2json('../my-vue-app-vuex')
-fs.writeFileSync('./config.json',JSON.stringify(outJson))
-console.log(outJson)
+// require('module-alias/register')//注册module-alias
+// const { directory2json } = require('@/core/config-transform')
+// let outJson = directory2json('../my-vue-app-vuex')
+// fs.writeFileSync('./config.json',JSON.stringify(outJson))
+// console.log(outJson)
 
 //todo：(一)生成package.json
 
 
 //公共
 // new CreateDirPage()
-
-//React项目
+//
+// // React项目
 // new CreatePageA()
 // new CreatePageB()
 // new CreatePageC()
@@ -54,6 +55,7 @@ console.log(outJson)
 // new ImportImmutable()
 // new ImportReduxImmutable()
 // new ImportEslintForReact()
+new ImportBootstrapForReact()
 
 
 //Vue项目
@@ -61,7 +63,7 @@ console.log(outJson)
 // new ImportVueRouter()
 // new ImportBabelForVue()
 // new ImportEslintForVue()
-new ImportVuex()
+// new ImportVuex()
 
 // console.log(child_process.execSync('npm i'))
 

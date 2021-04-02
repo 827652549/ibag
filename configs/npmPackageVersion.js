@@ -21,4 +21,6 @@ module.exports = {
   'eslint-plugin-react': '^7.23.1',
   "@vue/cli-plugin-vuex": "~4.5.0",
   "vuex": "^3.4.0",
+  "bootstrap": "^4.6.0",
+  "react-bootstrap": "^1.5.2",
 }

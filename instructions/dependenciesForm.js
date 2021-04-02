@@ -18,6 +18,7 @@ const ImportVueRouter = require('./importVueRouter')
 const ImportBabelForVue = require('./importBabelForVue')
 const ImportEslintForVue = require('./importEslintForVue')
 const ImportVuex = require('./importVuex')
+const ImportBootstrapForReact = require('./importBootstrapForReact')
 
 
 
@@ -38,6 +39,7 @@ module.exports = {
   "ImportImmutable":[InitIbagReact],
   "ImportReduxImmutable":[ImportReactRedux],
   "ImportEslintForReact":[InitIbagReact],
+  "ImportBootstrapForReact":[InitIbagReact],
 
 
   "InitIbagVue":[],
