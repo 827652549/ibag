@@ -41,7 +41,7 @@ class _instruction {
       haveExeced.push(this.constructor.name)
       console.log(haveExeced)
       fs.writeFileSync('./_haveExeced.json',JSON.stringify(haveExeced),'utf8')
-      this.dependencies(require('./dependenciesForm.js')[this.constructor.name])
+      this.dependencies(require('./_dependenciesForm.js')[this.constructor.name])
       this.execution(execFun)
     }
 

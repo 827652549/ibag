@@ -12,13 +12,14 @@ const ImportReduxSaga = require('./importReduxSaga')
 const ImportImmutable = require('./importImmutable')
 const ImportReduxImmutable = require('./importReduxImmutable')
 const ImportEslintForReact = require('./importEslintForReact')
+const ImportBootstrapForReact = require('./importBootstrapForReact')
+const ImportAntDesignForReact = require('./importAntDesignForReact')
 
 const InitIbagVue = require('./initIbagVue')
 const ImportVueRouter = require('./importVueRouter')
 const ImportBabelForVue = require('./importBabelForVue')
 const ImportEslintForVue = require('./importEslintForVue')
 const ImportVuex = require('./importVuex')
-const ImportBootstrapForReact = require('./importBootstrapForReact')
 const ImportBootstrapForVue = require('./importBootstrapForVue')
 
 
@@ -41,6 +42,7 @@ module.exports = {
   "ImportReduxImmutable":[ImportReactRedux],
   "ImportEslintForReact":[InitIbagReact],
   "ImportBootstrapForReact":[InitIbagReact],
+  "ImportAntDesignForReact":[InitIbagReact],
 
 
   "InitIbagVue":[],

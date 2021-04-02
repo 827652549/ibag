@@ -19,6 +19,8 @@ const ImportImmutable = require('./importImmutable')
 const ImportReduxImmutable = require('./importReduxImmutable')
 const ImportEslintForReact = require('./importEslintForReact')
 const ImportBootstrapForReact = require('./importBootstrapForReact')
+const ImportAntDesignForReact = require('./importAntDesignForReact')
+
 
 const InitIbagVue = require('./initIbagVue')
 const ImportVueRouter = require('./importVueRouter')
@@ -40,7 +42,7 @@ const ImportBootstrapForVue = require('./importBootstrapForVue')
 //todo：(一)生成package.json
 
 
-//公共
+// //公共
 // new CreateDirPage()
 //
 // // React项目
@@ -58,15 +60,16 @@ const ImportBootstrapForVue = require('./importBootstrapForVue')
 // new ImportReduxImmutable()
 // new ImportEslintForReact()
 // new ImportBootstrapForReact()
+// new ImportAntDesignForReact()
 
 
 //Vue项目
 new InitIbagVue()
-new ImportVueRouter()
-new ImportBabelForVue()
-new ImportEslintForVue()
-new ImportVuex()
-new ImportBootstrapForVue()
+// new ImportVueRouter()
+// new ImportBabelForVue()
+// new ImportEslintForVue()
+// new ImportVuex()
+// new ImportBootstrapForVue()
 
 // console.log(child_process.execSync('npm i'))
 
