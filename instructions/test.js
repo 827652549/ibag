@@ -28,6 +28,7 @@ const ImportBabelForVue = require('./importBabelForVue')
 const ImportEslintForVue = require('./importEslintForVue')
 const ImportVuex = require('./importVuex')
 const ImportBootstrapForVue = require('./importBootstrapForVue')
+const ImportAntDesignForVue = require('./importAntDesignForVue')
 
 
 
@@ -65,11 +66,12 @@ const ImportBootstrapForVue = require('./importBootstrapForVue')
 
 //Vue项目
 new InitIbagVue()
-// new ImportVueRouter()
-// new ImportBabelForVue()
-// new ImportEslintForVue()
-// new ImportVuex()
-// new ImportBootstrapForVue()
+new ImportVueRouter()
+new ImportBabelForVue()
+new ImportEslintForVue()
+new ImportVuex()
+new ImportBootstrapForVue()
+new ImportAntDesignForVue()
 
 // console.log(child_process.execSync('npm i'))
 

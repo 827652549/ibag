@@ -25,5 +25,6 @@ module.exports = {
   "react-bootstrap": "^1.5.2",
   "bootstrap-vue": "^2.21.2",
   "antd": "^4.15.0",
+  "ant-design-vue": "^1.7.4",
 
 }
