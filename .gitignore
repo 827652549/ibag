@@ -1,11 +1,6 @@
 # Project exclude paths
 node_modules
 
-my-vue-app1
-my-app1
-my-vue-app2
-my-app2
-my-react-app-eslint
-my-vue-app-eslint
-my-vue-app-router
 output
+
+my*

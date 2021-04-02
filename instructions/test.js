@@ -29,6 +29,7 @@ const ImportEslintForVue = require('./importEslintForVue')
 const ImportVuex = require('./importVuex')
 const ImportBootstrapForVue = require('./importBootstrapForVue')
 const ImportAntDesignForVue = require('./importAntDesignForVue')
+const ImportMaterialForVue = require('./importMaterialForVue')
 
 
 
@@ -51,7 +52,7 @@ const ImportAntDesignForVue = require('./importAntDesignForVue')
 // new CreatePageB()
 // new CreatePageC()
 // new CreatePage404()
-// new InitIbagReact()
+new InitIbagReact()
 // new CreateDirRouter()
 // new ImportReactRouterDom()
 // new ImportReactRedux()
@@ -65,13 +66,14 @@ const ImportAntDesignForVue = require('./importAntDesignForVue')
 
 
 //Vue项目
-new InitIbagVue()
-new ImportVueRouter()
-new ImportBabelForVue()
-new ImportEslintForVue()
-new ImportVuex()
-new ImportBootstrapForVue()
-new ImportAntDesignForVue()
+// new InitIbagVue()
+// new ImportVueRouter()
+// new ImportBabelForVue()
+// new ImportEslintForVue()
+// new ImportVuex()
+// new ImportBootstrapForVue()
+// new ImportAntDesignForVue()
+// new ImportMaterialForVue()
 
 // console.log(child_process.execSync('npm i'))
 
