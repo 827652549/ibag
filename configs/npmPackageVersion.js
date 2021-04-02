@@ -26,6 +26,7 @@ module.exports = {
   "bootstrap-vue": "^2.21.2",
   "antd": "^4.15.0",
   "ant-design-vue": "^1.7.4",
-  "vue-material": "^1.0.0-beta-15"
+  "vue-material": "^1.0.0-beta-15",
+  "@material-ui/core": "^4.11.3",
 
 }

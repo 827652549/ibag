@@ -14,6 +14,7 @@ const ImportReduxImmutable = require('./importReduxImmutable')
 const ImportEslintForReact = require('./importEslintForReact')
 const ImportBootstrapForReact = require('./importBootstrapForReact')
 const ImportAntDesignForReact = require('./importAntDesignForReact')
+const ImportMaterialForReact = require('./importMaterialForReact')
 
 const InitIbagVue = require('./initIbagVue')
 const ImportVueRouter = require('./importVueRouter')
@@ -45,6 +46,7 @@ module.exports = {
   "ImportEslintForReact":[InitIbagReact],
   "ImportBootstrapForReact":[InitIbagReact],
   "ImportAntDesignForReact":[InitIbagReact],
+  "ImportMaterialForReact":[InitIbagReact],
 
 
   "InitIbagVue":[],
@@ -55,4 +57,5 @@ module.exports = {
   "ImportBootstrapForVue":[InitIbagVue],
   "ImportAntDesignForVue":[InitIbagVue],
   "ImportMaterialForVue":[InitIbagVue],
+
 }

@@ -20,6 +20,7 @@ const ImportReduxImmutable = require('./importReduxImmutable')
 const ImportEslintForReact = require('./importEslintForReact')
 const ImportBootstrapForReact = require('./importBootstrapForReact')
 const ImportAntDesignForReact = require('./importAntDesignForReact')
+const ImportMaterialForReact = require('./importMaterialForReact')
 
 
 const InitIbagVue = require('./initIbagVue')
@@ -45,24 +46,25 @@ const ImportMaterialForVue = require('./importMaterialForVue')
 
 
 // //公共
-// new CreateDirPage()
-//
-// // React项目
-// new CreatePageA()
-// new CreatePageB()
-// new CreatePageC()
-// new CreatePage404()
+new CreateDirPage()
+
+// React项目
+new CreatePageA()
+new CreatePageB()
+new CreatePageC()
+new CreatePage404()
 new InitIbagReact()
-// new CreateDirRouter()
-// new ImportReactRouterDom()
-// new ImportReactRedux()
-// new ImportReduxThunk()
-// new ImportReduxSaga()
-// new ImportImmutable()
-// new ImportReduxImmutable()
-// new ImportEslintForReact()
+new CreateDirRouter()
+new ImportReactRouterDom()
+new ImportReactRedux()
+new ImportReduxThunk()
+new ImportReduxSaga()
+new ImportImmutable()
+new ImportReduxImmutable()
+new ImportEslintForReact()
 // new ImportBootstrapForReact()
 // new ImportAntDesignForReact()
+new ImportMaterialForReact()
 
 
 //Vue项目
