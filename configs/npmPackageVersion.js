@@ -34,6 +34,8 @@ module.exports = {
   "core-js": "^3.6.5",
   "vue": "^2.6.11",
   "@vue/cli-service": "~4.5.0",
-  "vue-template-compiler": "^2.6.11"
+  "vue-template-compiler": "^2.6.11",
+  "@vue/cli-plugin-unit-jest": "~4.5.0",
+  "@vue/test-utils": "^1.0.3",
 
 }

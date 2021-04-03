@@ -1,4 +1,5 @@
 const fs = require('fs')
+const merge = require('lodash/merge')
 
 /**
  * 基于context修改匹配字符串的第一个文本
@@ -77,7 +78,7 @@ function addFirstLineContext (contextPtah, text) {
  */
 function addItemInPackageJson (currKey,obj) {
   let json = JSON.parse(fs.readFileSync('../output/package.json','utf8'))
-  json[currKey] = Object.assign(json[currKey] || {},obj)
+  json[currKey] = merge(json[currKey] || {},obj)
   fs.writeFileSync('../output/package.json',JSON.stringify(json),'utf8')
 }
 

@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "del": "^6.0.0",
+    "lodash": "^4.17.21",
     "module-alias": "^2.2.2",
     "npm-check-updates": "^11.3.0"
   },

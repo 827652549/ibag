@@ -87,6 +87,14 @@ class ImportVueRouter extends require('./_instruction') {
           "@vue/cli-plugin-router": npmPackageVersion["@vue/cli-plugin-router"]
         }
       )
+      addItemInPackageJson(
+        'eslintConfig',
+        {
+          "rules": {
+            "no-undef": 0
+          }
+        }
+      )
     })
   }
 }
