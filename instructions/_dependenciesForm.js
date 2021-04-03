@@ -26,6 +26,7 @@ const ImportBootstrapForVue = require('./importBootstrapForVue')
 const ImportAntDesignForVue = require('./importAntDesignForVue')
 const ImportMaterialForVue = require('./importMaterialForVue')
 const ImportJestForVue = require('./importJestForVue')
+const ImportMochaForVue = require('./importMochaForVue')
 
 
 
@@ -62,5 +63,6 @@ module.exports = {
   "ImportBootstrapForVue":[InitIbagVue],
   "ImportAntDesignForVue":[InitIbagVue],
   "ImportMaterialForVue":[InitIbagVue],
-  "ImportJestForVue":[InitIbagVue]
+  "ImportJestForVue":[InitIbagVue],
+  "ImportMochaForVue":[InitIbagVue]
 }

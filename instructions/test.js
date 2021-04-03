@@ -27,15 +27,16 @@ const ImportMaterialForReact = require('./importMaterialForReact')
 const ImportJestForReact = require('./importJestForReact')
 
 
-const InitIbagVue = require('./initIbagVue')
-const ImportVueRouter = require('./importVueRouter')
-const ImportBabelForVue = require('./importBabelForVue')
-const ImportEslintForVue = require('./importEslintForVue')
-const ImportVuex = require('./importVuex')
-const ImportBootstrapForVue = require('./importBootstrapForVue')
-const ImportAntDesignForVue = require('./importAntDesignForVue')
-const ImportMaterialForVue = require('./importMaterialForVue')
-const ImportJestForVue = require('./importJestForVue')
+// const InitIbagVue = require('./initIbagVue')
+// const ImportVueRouter = require('./importVueRouter')
+// const ImportBabelForVue = require('./importBabelForVue')
+// const ImportEslintForVue = require('./importEslintForVue')
+// const ImportVuex = require('./importVuex')
+// const ImportBootstrapForVue = require('./importBootstrapForVue')
+// const ImportAntDesignForVue = require('./importAntDesignForVue')
+// const ImportMaterialForVue = require('./importMaterialForVue')
+// const ImportJestForVue = require('./importJestForVue')
+const ImportMochaForVue = require('./importMochaForVue')
 
 
 // 生成某目录：
@@ -72,15 +73,17 @@ const ImportJestForVue = require('./importJestForVue')
 
 
 //Vue项目
-new InitIbagVue()
-new ImportVueRouter()
-new ImportBabelForVue()
-new ImportEslintForVue()
-new ImportVuex()
-new ImportBootstrapForVue()
-new ImportAntDesignForVue()
-new ImportMaterialForVue()
-new ImportJestForVue()
+// new InitIbagVue()
+// new ImportVueRouter()
+// new ImportBabelForVue()
+// new ImportEslintForVue()
+// new ImportVuex()
+// new ImportBootstrapForVue()
+// new ImportAntDesignForVue()
+// new ImportMaterialForVue()
+// new ImportJestForVue()
+new ImportMochaForVue()
+
 
 
 // console.log(child_process.execSync('npm i'))
