@@ -16,6 +16,7 @@ const ImportBootstrapForReact = require('./importBootstrapForReact')
 const ImportAntDesignForReact = require('./importAntDesignForReact')
 const ImportMaterialForReact = require('./importMaterialForReact')
 const ImportJestForReact = require('./importJestForReact')
+const ImportMochaForReact = require('./importMochaForReact')
 
 const InitIbagVue = require('./initIbagVue')
 const ImportVueRouter = require('./importVueRouter')
@@ -53,6 +54,7 @@ module.exports = {
   "ImportAntDesignForReact":[InitIbagReact],
   "ImportMaterialForReact":[InitIbagReact],
   "ImportJestForReact":[InitIbagReact],
+  "ImportMochaForReact":[InitIbagReact],
 
 
   "InitIbagVue":[],

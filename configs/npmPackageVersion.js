@@ -38,6 +38,7 @@ module.exports = {
   "@vue/cli-plugin-unit-jest": "~4.5.0",
   "@vue/test-utils": "^1.0.3",
   "@vue/cli-plugin-unit-mocha": "~4.5.0",
-  "chai": "^4.1.2",
+  "chai": "^4.3.4",
+  "mocha": "^8.3.2"
 
 }

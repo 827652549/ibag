@@ -37,39 +37,41 @@ const ImportAntDesignForVue = require('./importAntDesignForVue')
 const ImportMaterialForVue = require('./importMaterialForVue')
 const ImportJestForVue = require('./importJestForVue')
 const ImportMochaForVue = require('./importMochaForVue')
+const ImportMochaForReact = require('./importMochaForReact')
 
 
 // 生成某目录：
-// require('module-alias/register')//注册module-alias
-// const { directory2json } = require('@/core/config-transform')
-// let outJson = directory2json('../my-vue-app-jest/tests')
-// fs.writeFileSync('./config.json',JSON.stringify(outJson))
-// console.log(outJson)
+require('module-alias/register')//注册module-alias
+const { directory2json } = require('@/core/config-transform')
+let outJson = directory2json('../my-react-app-mocha/test')
+fs.writeFileSync('./config.json',JSON.stringify(outJson))
+console.log(outJson)
 
 //todo：(一)生成package.json
 
 
 // //公共
-// new CreateDirPage()
+new CreateDirPage()
 
 // React项目
-// new CreatePageA()
-// new CreatePageB()
-// new CreatePageC()
-// new CreatePage404()
+new CreatePageA()
+new CreatePageB()
+new CreatePageC()
+new CreatePage404()
 new InitIbagReact()
-// new CreateDirRouter()
-// new ImportReactRouterDom()
-// new ImportReactRedux()
-// new ImportReduxThunk()
-// new ImportReduxSaga()
-// new ImportImmutable()
-// new ImportReduxImmutable()
-// new ImportEslintForReact()
-// new ImportBootstrapForReact()
+new CreateDirRouter()
+new ImportReactRouterDom()
+new ImportReactRedux()
+new ImportReduxThunk()
+new ImportReduxSaga()
+new ImportImmutable()
+new ImportReduxImmutable()
+new ImportEslintForReact()
+new ImportBootstrapForReact()
 // new ImportAntDesignForReact()
 // new ImportMaterialForReact()
-new ImportJestForReact()
+// // new ImportJestForReact()
+new ImportMochaForReact()
 
 
 //Vue项目

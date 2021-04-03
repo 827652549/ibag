@@ -1,1 +1,1 @@
-["tests",["unit",{"filename":"example","extension":"spec.js","context":"describe('computation', () => {\n  it('1+1=?', () => {\n    expect(1+1).toBe(2)\n  })\n})\n"}]]
+["test",{"filename":"test","extension":"js","context":"const expect = require('chai').expect;\n\ndescribe('computation', function() {\n  it('1+1=2', function() {\n    expect(1+1).to.be.equal(2);\n  });\n});\n"}]
