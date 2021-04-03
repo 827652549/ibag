@@ -26,6 +26,7 @@ const ImportAntDesignForReact = require('./importAntDesignForReact')
 const ImportMaterialForReact = require('./importMaterialForReact')
 const ImportJestForReact = require('./importJestForReact')
 const ImportMochaForReact = require('./importMochaForReact')
+const ImportAxiosForReact = require('./importAxiosForReact')
 
 
 const InitIbagVue = require('./initIbagVue')
@@ -73,6 +74,8 @@ console.log(outJson)
 // // new ImportMaterialForReact()
 // // // new ImportJestForReact()
 // new ImportMochaForReact()
+new ImportAxiosForReact()
+
 
 
 //Vue项目
@@ -86,7 +89,7 @@ console.log(outJson)
 // new ImportMaterialForVue()
 // // new ImportJestForVue()
 // new ImportMochaForVue()
-new ImportAxiosForVue()
+// new ImportAxiosForVue()
 
 
 
