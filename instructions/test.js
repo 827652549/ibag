@@ -42,12 +42,13 @@ const ImportMochaForVue = require('./importMochaForVue')
 const ImportAxiosForVue = require('./importAxiosForVue')
 
 const ImportLodash = require('./importLodash')
+const ImportCypress = require('./importCypress')
 
 
 // 生成某目录：
 require('module-alias/register')//注册module-alias
 const { directory2json } = require('@/core/config-transform')
-let outJson = directory2json('../my-react-app-mocha/test')
+let outJson = directory2json('../output')
 fs.writeFileSync('./config.json',JSON.stringify(outJson))
 console.log(outJson)
 
@@ -62,7 +63,7 @@ console.log(outJson)
 // new CreatePageB()
 // new CreatePageC()
 // new CreatePage404()
-// new InitIbagReact()
+new InitIbagReact()
 // new CreateDirRouter()
 // new ImportReactRouterDom()
 // new ImportReactRedux()
@@ -81,7 +82,7 @@ console.log(outJson)
 
 
 //Vue项目
-new InitIbagVue()
+// new InitIbagVue()
 // new ImportVueRouter()
 // new ImportBabelForVue()
 // new ImportEslintForVue()
@@ -93,7 +94,8 @@ new InitIbagVue()
 // new ImportMochaForVue()
 // new ImportAxiosForVue()
 
-new ImportLodash()
+// new ImportLodash()
+new ImportCypress()
 
 
 // console.log(child_process.execSync('npm i'))
