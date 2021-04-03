@@ -1,1 +1,1 @@
-["CreateDirPage","InitIbagReact","CreatePageA","CreatePageB","CreatePageC","CreatePage404","ImportReactRouterDom","CreateDirRouter","ImportReactRedux","ImportReduxThunk","ImportReduxSaga","ImportImmutable","ImportReduxImmutable","ImportEslintForReact","ImportBootstrapForReact","ImportMochaForReact"]
+["ImportAxiosForVue","InitIbagVue"]

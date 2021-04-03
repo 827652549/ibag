@@ -25,6 +25,7 @@ const ImportBootstrapForReact = require('./importBootstrapForReact')
 const ImportAntDesignForReact = require('./importAntDesignForReact')
 const ImportMaterialForReact = require('./importMaterialForReact')
 const ImportJestForReact = require('./importJestForReact')
+const ImportMochaForReact = require('./importMochaForReact')
 
 
 const InitIbagVue = require('./initIbagVue')
@@ -37,7 +38,7 @@ const ImportAntDesignForVue = require('./importAntDesignForVue')
 const ImportMaterialForVue = require('./importMaterialForVue')
 const ImportJestForVue = require('./importJestForVue')
 const ImportMochaForVue = require('./importMochaForVue')
-const ImportMochaForReact = require('./importMochaForReact')
+const ImportAxiosForVue = require('./importAxiosForVue')
 
 
 // 生成某目录：
@@ -51,27 +52,27 @@ console.log(outJson)
 
 
 // //公共
-new CreateDirPage()
-
-// React项目
-new CreatePageA()
-new CreatePageB()
-new CreatePageC()
-new CreatePage404()
-new InitIbagReact()
-new CreateDirRouter()
-new ImportReactRouterDom()
-new ImportReactRedux()
-new ImportReduxThunk()
-new ImportReduxSaga()
-new ImportImmutable()
-new ImportReduxImmutable()
-new ImportEslintForReact()
-new ImportBootstrapForReact()
-// new ImportAntDesignForReact()
-// new ImportMaterialForReact()
-// // new ImportJestForReact()
-new ImportMochaForReact()
+// new CreateDirPage()
+//
+// // React项目
+// new CreatePageA()
+// new CreatePageB()
+// new CreatePageC()
+// new CreatePage404()
+// new InitIbagReact()
+// new CreateDirRouter()
+// new ImportReactRouterDom()
+// new ImportReactRedux()
+// new ImportReduxThunk()
+// new ImportReduxSaga()
+// new ImportImmutable()
+// new ImportReduxImmutable()
+// new ImportEslintForReact()
+// new ImportBootstrapForReact()
+// // new ImportAntDesignForReact()
+// // new ImportMaterialForReact()
+// // // new ImportJestForReact()
+// new ImportMochaForReact()
 
 
 //Vue项目
@@ -85,6 +86,7 @@ new ImportMochaForReact()
 // new ImportMaterialForVue()
 // // new ImportJestForVue()
 // new ImportMochaForVue()
+new ImportAxiosForVue()
 
 
 

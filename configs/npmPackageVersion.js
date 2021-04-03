@@ -39,6 +39,8 @@ module.exports = {
   "@vue/test-utils": "^1.0.3",
   "@vue/cli-plugin-unit-mocha": "~4.5.0",
   "chai": "^4.3.4",
-  "mocha": "^8.3.2"
+  "mocha": "^8.3.2",
+  "axios": "^0.21.1",
+  "vue-axios": "^3.2.4",
 
 }

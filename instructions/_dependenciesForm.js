@@ -28,6 +28,7 @@ const ImportAntDesignForVue = require('./importAntDesignForVue')
 const ImportMaterialForVue = require('./importMaterialForVue')
 const ImportJestForVue = require('./importJestForVue')
 const ImportMochaForVue = require('./importMochaForVue')
+const ImportAxiosForVue = require('./importAxiosForVue')
 
 
 
@@ -66,5 +67,6 @@ module.exports = {
   "ImportAntDesignForVue":[InitIbagVue],
   "ImportMaterialForVue":[InitIbagVue],
   "ImportJestForVue":[InitIbagVue],
-  "ImportMochaForVue":[InitIbagVue]
+  "ImportMochaForVue":[InitIbagVue],
+  "ImportAxiosForVue":[InitIbagVue]
 }
