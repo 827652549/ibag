@@ -42,5 +42,6 @@ module.exports = {
   "mocha": "^8.3.2",
   "axios": "^0.21.1",
   "vue-axios": "^3.2.4",
+  "lodash": "^4.17.21",
 
 }

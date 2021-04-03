@@ -41,6 +41,8 @@ const ImportJestForVue = require('./importJestForVue')
 const ImportMochaForVue = require('./importMochaForVue')
 const ImportAxiosForVue = require('./importAxiosForVue')
 
+const ImportLodash = require('./importLodash')
+
 
 // 生成某目录：
 require('module-alias/register')//注册module-alias
@@ -74,12 +76,12 @@ console.log(outJson)
 // // new ImportMaterialForReact()
 // // // new ImportJestForReact()
 // new ImportMochaForReact()
-new ImportAxiosForReact()
+// new ImportAxiosForReact()
 
 
 
 //Vue项目
-// new InitIbagVue()
+new InitIbagVue()
 // new ImportVueRouter()
 // new ImportBabelForVue()
 // new ImportEslintForVue()
@@ -91,6 +93,7 @@ new ImportAxiosForReact()
 // new ImportMochaForVue()
 // new ImportAxiosForVue()
 
+new ImportLodash()
 
 
 // console.log(child_process.execSync('npm i'))

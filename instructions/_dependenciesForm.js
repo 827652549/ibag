@@ -32,6 +32,9 @@ const ImportMochaForVue = require('./importMochaForVue')
 const ImportAxiosForVue = require('./importAxiosForVue')
 
 
+const ImportLodash = require('./importLodash')
+
+
 
 
 
@@ -70,5 +73,6 @@ module.exports = {
   "ImportMaterialForVue":[InitIbagVue],
   "ImportJestForVue":[InitIbagVue],
   "ImportMochaForVue":[InitIbagVue],
-  "ImportAxiosForVue":[InitIbagVue]
+
+  "ImportLodash":[]
 }
