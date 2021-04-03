@@ -36,6 +36,13 @@ class ImportJestForReact extends require('./_instruction') {
           "@testing-library/user-event": npmPackageVersion["@testing-library/user-event"],
         }
       )
+      addItemInPackageJson(
+        'scripts',
+        {
+          "test": "react-scripts test"
+        }
+      )
+
     })
   }
 }

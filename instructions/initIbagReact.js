@@ -14,7 +14,7 @@ const createJson = [
   {
     "filename": "package",
     "extension": "json",
-    "context": "{\n  \"name\": \"ibag-project\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"dependencies\": {\n      },\n \"devDependencies\": {\n      },\n  \"scripts\": {\n    \"start\": \"react-scripts start\",\n    \"build\": \"react-scripts build\",\n    \"test\": \"react-scripts test\",\n    \"eject\": \"react-scripts eject\"\n  },\n  \"eslintConfig\": {\n    \"extends\": [\n      \"react-app\"\n    ]\n  },\n  \"browserslist\": {\n    \"production\": [\n      \">0.2%\",\n      \"not dead\",\n      \"not op_mini all\"\n    ],\n    \"development\": [\n      \"last 1 chrome version\",\n      \"last 1 firefox version\",\n      \"last 1 safari version\"\n    ]\n  }\n}\n"
+    "context": "{\n  \"name\": \"ibag-project\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"dependencies\": {\n      },\n \"devDependencies\": {\n      },\n  \"scripts\": {\n    \"start\": \"react-scripts start\",\n    \"build\": \"react-scripts build\",\n     \"eject\": \"react-scripts eject\"\n  },\n  \"eslintConfig\": {\n    \"extends\": [\n      \"react-app\"\n    ]\n  },\n  \"browserslist\": {\n    \"production\": [\n      \">0.2%\",\n      \"not dead\",\n      \"not op_mini all\"\n    ],\n    \"development\": [\n      \"last 1 chrome version\",\n      \"last 1 firefox version\",\n      \"last 1 safari version\"\n    ]\n  }\n}\n"
   },
   [
     "public",

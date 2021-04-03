@@ -27,15 +27,15 @@ const ImportMaterialForReact = require('./importMaterialForReact')
 const ImportJestForReact = require('./importJestForReact')
 
 
-// const InitIbagVue = require('./initIbagVue')
-// const ImportVueRouter = require('./importVueRouter')
-// const ImportBabelForVue = require('./importBabelForVue')
-// const ImportEslintForVue = require('./importEslintForVue')
-// const ImportVuex = require('./importVuex')
-// const ImportBootstrapForVue = require('./importBootstrapForVue')
-// const ImportAntDesignForVue = require('./importAntDesignForVue')
-// const ImportMaterialForVue = require('./importMaterialForVue')
-// const ImportJestForVue = require('./importJestForVue')
+const InitIbagVue = require('./initIbagVue')
+const ImportVueRouter = require('./importVueRouter')
+const ImportBabelForVue = require('./importBabelForVue')
+const ImportEslintForVue = require('./importEslintForVue')
+const ImportVuex = require('./importVuex')
+const ImportBootstrapForVue = require('./importBootstrapForVue')
+const ImportAntDesignForVue = require('./importAntDesignForVue')
+const ImportMaterialForVue = require('./importMaterialForVue')
+const ImportJestForVue = require('./importJestForVue')
 const ImportMochaForVue = require('./importMochaForVue')
 
 
@@ -57,7 +57,7 @@ const ImportMochaForVue = require('./importMochaForVue')
 // new CreatePageB()
 // new CreatePageC()
 // new CreatePage404()
-// new InitIbagReact()
+new InitIbagReact()
 // new CreateDirRouter()
 // new ImportReactRouterDom()
 // new ImportReactRedux()
@@ -69,7 +69,7 @@ const ImportMochaForVue = require('./importMochaForVue')
 // new ImportBootstrapForReact()
 // new ImportAntDesignForReact()
 // new ImportMaterialForReact()
-// new ImportJestForReact()
+new ImportJestForReact()
 
 
 //Vue项目
@@ -81,8 +81,8 @@ const ImportMochaForVue = require('./importMochaForVue')
 // new ImportBootstrapForVue()
 // new ImportAntDesignForVue()
 // new ImportMaterialForVue()
-// new ImportJestForVue()
-new ImportMochaForVue()
+// // new ImportJestForVue()
+// new ImportMochaForVue()
 
 
 
