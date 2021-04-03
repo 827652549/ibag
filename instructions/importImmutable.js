@@ -1,5 +1,5 @@
 require('module-alias/register')//注册module-alias
-const { addStringContext } = require('@/core/context-handle')
+const { addStringContext,addItemInPackageJson } = require('@/core/context-handle')
 const npmPackageVersion = require('@/configs/npmPackageVersion')
 
 /**
@@ -9,11 +9,11 @@ class ImportImmutable extends require('./_instruction') {
   constructor (props) {
     super(props)
     this.run(function () {
-      addStringContext(
-        '../output/package.json',
-        `"dependencies": {`,
-        'right',
-        `\n\t"immutable": "${npmPackageVersion["immutable"]}",`
+      addItemInPackageJson(
+        'dependencies',
+        {
+          "immutable": npmPackageVersion["immutable"]
+        }
       )
     })
   }

@@ -70,6 +70,24 @@ function addFirstLineContext (contextPtah, text) {
     fs.writeFileSync(contextPtah, context, 'utf8')
 }
 
+/**
+ * 在../output/package.json中添加项
+ * currkey可以是dependence，
+ * obj是{react:^1.0.0}
+ */
+function addItemInPackageJson (currKey,obj) {
+  let json = JSON.parse(fs.readFileSync('../output/package.json','utf8'))
+  json[currKey] = Object.assign(json[currKey] || {},obj)
+  fs.writeFileSync('../output/package.json',JSON.stringify(json),'utf8')
+}
+
+/**
+ * 在package.json中删除项
+ */
+function deleteItemInPackageJson (key) {
+
+}
+
 module.exports = {
   spliceStringContext,
   spliceFunctionContext,
@@ -77,4 +95,5 @@ module.exports = {
   deleteFunctionContext,
   addStringContext,
   addFirstLineContext,
+  addItemInPackageJson
 }

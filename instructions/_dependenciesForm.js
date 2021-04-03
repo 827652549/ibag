@@ -15,6 +15,7 @@ const ImportEslintForReact = require('./importEslintForReact')
 const ImportBootstrapForReact = require('./importBootstrapForReact')
 const ImportAntDesignForReact = require('./importAntDesignForReact')
 const ImportMaterialForReact = require('./importMaterialForReact')
+const ImportJestForReact = require('./importJestForReact')
 
 const InitIbagVue = require('./initIbagVue')
 const ImportVueRouter = require('./importVueRouter')
@@ -24,6 +25,8 @@ const ImportVuex = require('./importVuex')
 const ImportBootstrapForVue = require('./importBootstrapForVue')
 const ImportAntDesignForVue = require('./importAntDesignForVue')
 const ImportMaterialForVue = require('./importMaterialForVue')
+
+
 
 
 
@@ -47,6 +50,7 @@ module.exports = {
   "ImportBootstrapForReact":[InitIbagReact],
   "ImportAntDesignForReact":[InitIbagReact],
   "ImportMaterialForReact":[InitIbagReact],
+  "ImportJestForReact":[InitIbagReact],
 
 
   "InitIbagVue":[],
@@ -56,6 +60,5 @@ module.exports = {
   "ImportVuex":[InitIbagVue],
   "ImportBootstrapForVue":[InitIbagVue],
   "ImportAntDesignForVue":[InitIbagVue],
-  "ImportMaterialForVue":[InitIbagVue],
-
+  "ImportMaterialForVue":[InitIbagVue]
 }

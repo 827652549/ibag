@@ -1,7 +1,7 @@
 require('module-alias/register')//注册module-alias
 const fs = require('fs')//注册module-alias
 const { modify } = require('@/core/config-transform')
-const { spliceStringContext,addStringContext,addFirstLineContext } = require('@/core/context-handle')
+const { spliceStringContext,addStringContext,addFirstLineContext,addItemInPackageJson } = require('@/core/context-handle')
 const npmPackageVersion = require('@/configs/npmPackageVersion')
 
 /**
@@ -11,12 +11,12 @@ class ImportBootstrapForVue extends require('./_instruction') {
   constructor (props) {
     super(props)
     this.run(function () {
-      addStringContext(
-        '../output/package.json',
-        `"dependencies": {`,
-        'right',
-        `\n\t"bootstrap": "${npmPackageVersion["bootstrap"]}",
-\t"bootstrap-vue": "${npmPackageVersion["bootstrap-vue"]}",`
+      addItemInPackageJson(
+        'dependencies',
+        {
+          "bootstrap": npmPackageVersion["bootstrap"],
+          "bootstrap-vue": npmPackageVersion["bootstrap-vue"]
+        }
       )
       addFirstLineContext(
         '../output/src/main.js',

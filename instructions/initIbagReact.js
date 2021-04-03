@@ -1,6 +1,6 @@
 require('module-alias/register')//注册module-alias
 const { modify } = require('@/core/config-transform')
-const { spliceStringContext,addStringContext,addFirstLineContext } = require('@/core/context-handle')
+const { spliceStringContext,addStringContext,addFirstLineContext,addItemInPackageJson } = require('@/core/context-handle')
 const globalConfig = require('@/configs/global')
 const npmPackageVersion = require('@/configs/npmPackageVersion')
 
@@ -63,13 +63,13 @@ class InitIbagReact extends require('./_instruction') {
     super(props)
     this.run(function () {
       modify(null,createJson)
-      addStringContext(
-        '../output/package.json',
-        `"dependencies": {`,
-        'right',
-        `\n\t"react": "${npmPackageVersion["react"]}",
-        "react-dom": "${npmPackageVersion["react-dom"]}",
-        "react-scripts": "${npmPackageVersion["react-scripts"]}"`
+      addItemInPackageJson(
+        'dependencies',
+        {
+          "react": npmPackageVersion["react"],
+          "react-dom": npmPackageVersion["react-dom"],
+          "react-scripts": npmPackageVersion["react-scripts"],
+        }
       )
     })
   }

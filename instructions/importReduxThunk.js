@@ -1,5 +1,5 @@
 require('module-alias/register')//注册module-alias
-const { addStringContext,addFirstLineContext } = require('@/core/context-handle')
+const { addStringContext,addFirstLineContext,addItemInPackageJson } = require('@/core/context-handle')
 const npmPackageVersion = require('@/configs/npmPackageVersion')
 
 /**
@@ -21,11 +21,11 @@ class ImportReduxThunk extends require('./_instruction') {
         'right',
         'thunk,'
       )
-      addStringContext(
-        '../output/package.json',
-        `"dependencies": {`,
-        'right',
-        `\n\t"redux-thunk": "${npmPackageVersion["redux-thunk"]}",`
+      addItemInPackageJson(
+        'dependencies',
+        {
+          "redux-thunk": npmPackageVersion["redux-thunk"]
+        }
       )
     })
   }

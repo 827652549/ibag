@@ -1,6 +1,6 @@
 require('module-alias/register')//注册module-alias
 const { modify } = require('@/core/config-transform')
-const { spliceStringContext,addStringContext,addFirstLineContext } = require('@/core/context-handle')
+const { spliceStringContext,addStringContext,addFirstLineContext,addItemInPackageJson } = require('@/core/context-handle')
 const npmPackageVersion = require('@/configs/npmPackageVersion')
 
 const createFileSagasJS = [
@@ -52,11 +52,11 @@ class ImportReduxSaga extends require('./_instruction') {
         '// then run the saga\n' +
         'sagaMiddleware.run(mySaga)\n'
       )
-      addStringContext(
-        '../output/package.json',
-        `"dependencies": {`,
-        'right',
-        `\n\t"redux-saga": "${npmPackageVersion["redux-saga"]}",`
+      addItemInPackageJson(
+        'dependencies',
+        {
+          "redux-saga": npmPackageVersion["redux-saga"]
+        }
       )
     })
   }

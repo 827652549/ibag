@@ -1,6 +1,6 @@
 require('module-alias/register')//注册module-alias
 const { modify } = require('@/core/config-transform')
-const { addStringContext,addFirstLineContext } = require('@/core/context-handle')
+const { addStringContext,addFirstLineContext,addItemInPackageJson } = require('@/core/context-handle')
 const npmPackageVersion = require('@/configs/npmPackageVersion')
 
 const createJson = [
@@ -75,17 +75,17 @@ class ImportVueRouter extends require('./_instruction') {
         'right',
         `\n\trouter,`
       )
-      addStringContext(
-          '../output/package.json',
-          `"dependencies": {`,
-          'right',
-          `\n\t"vue-router": "${npmPackageVersion['vue-router']}",`
+      addItemInPackageJson(
+        'dependencies',
+        {
+          "vue-router": npmPackageVersion["vue-router"]
+        }
       )
-      addStringContext(
-        '../output/package.json',
-        `"devDependencies": {`,
-        'right',
-        `\n\t"@vue/cli-plugin-router": "${npmPackageVersion['@vue/cli-plugin-router']}",`
+      addItemInPackageJson(
+        'devDependencies',
+        {
+          "@vue/cli-plugin-router": npmPackageVersion["@vue/cli-plugin-router"]
+        }
       )
     })
   }

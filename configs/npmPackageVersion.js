@@ -28,5 +28,12 @@ module.exports = {
   "ant-design-vue": "^1.7.4",
   "vue-material": "^1.0.0-beta-15",
   "@material-ui/core": "^4.11.3",
+  "@testing-library/jest-dom": "^5.11.4",
+  "@testing-library/react": "^11.1.0",
+  "@testing-library/user-event": "^12.1.10",
+  "core-js": "^3.6.5",
+  "vue": "^2.6.11",
+  "@vue/cli-service": "~4.5.0",
+  "vue-template-compiler": "^2.6.11"
 
 }

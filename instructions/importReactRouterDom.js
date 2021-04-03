@@ -1,6 +1,6 @@
 require('module-alias/register')//注册module-alias
 const { modify } = require('@/core/config-transform')
-const { spliceStringContext,addStringContext,addFirstLineContext } = require('@/core/context-handle')
+const { spliceStringContext,addStringContext,addFirstLineContext,addItemInPackageJson } = require('@/core/context-handle')
 const globalConfig = require('@/configs/global')
 const npmPackageVersion = require('@/configs/npmPackageVersion')
 
@@ -66,11 +66,11 @@ export default function Router() {
         '../output/src/App.js',
         `import { Link } from 'react-router-dom'\n`
       )
-      addStringContext(
-          '../output/package.json',
-          `"dependencies": {`,
-          'right',
-          `\n\t"react-router-dom": "${npmPackageVersion['react-router-dom']}",`
+      addItemInPackageJson(
+        'dependencies',
+        {
+          "react-router-dom": npmPackageVersion["react-router-dom"]
+        }
       )
       addStringContext(
         '../output/src/App.js',

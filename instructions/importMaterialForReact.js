@@ -1,6 +1,6 @@
 require('module-alias/register')//注册module-alias
 const { modify } = require('@/core/config-transform')
-const { spliceStringContext,addStringContext,addFirstLineContext } = require('@/core/context-handle')
+const { spliceStringContext,addStringContext,addFirstLineContext,addItemInPackageJson } = require('@/core/context-handle')
 const npmPackageVersion = require('@/configs/npmPackageVersion')
 
 /**
@@ -10,11 +10,11 @@ class ImportMaterialForReact extends require('./_instruction') {
   constructor (props) {
     super(props)
     this.run(function () {
-      addStringContext(
-        '../output/package.json',
-        `"dependencies": {`,
-        'right',
-        `\n\t"@material-ui/core": "${npmPackageVersion["@material-ui/core"]}",`
+      addItemInPackageJson(
+        'dependencies',
+        {
+          "@material-ui/core": npmPackageVersion["@material-ui/core"]
+        }
       )
       addFirstLineContext(
         '../output/src/App.js',

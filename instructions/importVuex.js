@@ -1,6 +1,6 @@
 require('module-alias/register')//注册module-alias
 const { modify } = require('@/core/config-transform')
-const { addStringContext,addFirstLineContext } = require('@/core/context-handle')
+const { addStringContext,addFirstLineContext,addItemInPackageJson } = require('@/core/context-handle')
 const npmPackageVersion = require('@/configs/npmPackageVersion')
 
 const addDirGlobalStore = [
@@ -40,17 +40,17 @@ class ImportVuex extends require('./_instruction') {
         `right`,
         `\nstore,\n`
       )
-      addStringContext(
-          '../output/package.json',
-          `"devDependencies": {`,
-          'right',
-          `\n\t"@vue/cli-plugin-vuex": "${npmPackageVersion['@vue/cli-plugin-vuex']}",`
+      addItemInPackageJson(
+        'devDependencies',
+        {
+          "@vue/cli-plugin-vuex": npmPackageVersion["@vue/cli-plugin-vuex"]
+        }
       )
-      addStringContext(
-        '../output/package.json',
-        `"dependencies": {`,
-        'right',
-        `\n\t"vuex": "${npmPackageVersion['vuex']}",`
+      addItemInPackageJson(
+        'dependencies',
+        {
+          "vuex": npmPackageVersion["vuex"]
+        }
       )
     })
   }
