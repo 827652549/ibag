@@ -6,7 +6,7 @@ const {addStringContext,addFirstLineContext } = require('@/core/context-handle')
  * 指令【在page目录下创建页面404】
  * 注意，该指令依赖react-router-dom
  */
-class CreatePage404 extends require('./_instruction') {
+class CreatePage404ForReact extends require('./_instruction') {
   //通过类名，获取到该指令依赖列表文件中到依赖指令
   constructor (props) {
     super(props)
@@ -53,4 +53,4 @@ export default NoMatch;
     })
   }
 }
-module.exports = CreatePage404
+module.exports = CreatePage404ForReact

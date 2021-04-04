@@ -4,12 +4,11 @@ const InitIbagReact = require('./initIbagReact')
 const CreatePageA = require('./createPageA')
 const CreatePageB = require('./createPageB')
 const CreatePageC = require('./createPageC')
-const CreatePage404 = require('./createPage404')
+const CreatePage404ForReact = require('./createPage404ForReact')
 const ImportReactRouterDom = require('./importReactRouterDom')
 const ImportReactRedux = require('./importReactRedux')
 const ImportReduxThunk = require('./importReduxThunk')
 const ImportReduxSaga = require('./importReduxSaga')
-const ImportImmutable = require('./importImmutable')
 const ImportReduxImmutable = require('./importReduxImmutable')
 const ImportEslintForReact = require('./importEslintForReact')
 const ImportBootstrapForReact = require('./importBootstrapForReact')
@@ -30,6 +29,7 @@ const ImportMaterialForVue = require('./importMaterialForVue')
 const ImportJestForVue = require('./importJestForVue')
 const ImportMochaForVue = require('./importMochaForVue')
 const ImportAxiosForVue = require('./importAxiosForVue')
+const CreatePage404ForVue = require('./createPage404ForVue')
 
 
 const ImportLodash = require('./importLodash')
@@ -49,7 +49,7 @@ module.exports = {
   "CreatePageA":[CreateDirPage],
   "CreatePageB":[CreateDirPage],
   "CreatePageC":[CreateDirPage],
-  "CreatePage404":[ImportReactRouterDom],
+  "CreatePage404ForReact":[ImportReactRouterDom],
   "ImportReactRouterDom":[CreateDirRouter,CreatePageA,CreatePageB,CreatePageC],
   "ImportReactRedux":[ImportReactRouterDom],
   "ImportReduxThunk":[ImportReactRedux],
@@ -67,6 +67,7 @@ module.exports = {
 
   "InitIbagVue":[],
   "ImportVueRouter":[InitIbagVue],
+  "CreatePage404ForVue":[ImportVueRouter],
   "ImportBabelForVue":[InitIbagVue],
   "ImportEslintForVue":[InitIbagVue],
   "ImportVuex":[InitIbagVue],
