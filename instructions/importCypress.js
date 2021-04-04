@@ -79,7 +79,7 @@ class ImportCypress extends require('./_instruction') {
       addItemInPackageJson(
         'scripts',
         {
-          "cypress": "node_modules/.bin/cypress open"
+          "e2e": "node_modules/.bin/cypress open"
         }
       )
 
