@@ -44,5 +44,8 @@ module.exports = {
   "vue-axios": "^3.2.4",
   "lodash": "^4.17.21",
   "cypress": "^6.8.0",
+  "chromedriver": "^89.0.0",
+  "nightwatch": "^1.6.1",
+  "selenium-server": "^3.141.59"
 
 }

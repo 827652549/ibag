@@ -43,14 +43,15 @@ const ImportAxiosForVue = require('./importAxiosForVue')
 
 const ImportLodash = require('./importLodash')
 const ImportCypress = require('./importCypress')
+const ImportNightWatch = require('./importNightWatch')
 
 
 // 生成某目录：
-require('module-alias/register')//注册module-alias
-const { directory2json } = require('@/core/config-transform')
-let outJson = directory2json('../output')
-fs.writeFileSync('./config.json',JSON.stringify(outJson))
-console.log(outJson)
+// require('module-alias/register')//注册module-alias
+// const { directory2json } = require('@/core/config-transform')
+// let outJson = directory2json('../nightwatch-test')
+// fs.writeFileSync('./config.json',JSON.stringify(outJson))
+// console.log(outJson)
 
 //todo：(一)生成package.json
 
@@ -63,7 +64,7 @@ console.log(outJson)
 // new CreatePageB()
 // new CreatePageC()
 // new CreatePage404()
-new InitIbagReact()
+// new InitIbagReact()
 // new CreateDirRouter()
 // new ImportReactRouterDom()
 // new ImportReactRedux()
@@ -82,7 +83,7 @@ new InitIbagReact()
 
 
 //Vue项目
-// new InitIbagVue()
+new InitIbagVue()
 // new ImportVueRouter()
 // new ImportBabelForVue()
 // new ImportEslintForVue()
@@ -95,7 +96,8 @@ new InitIbagReact()
 // new ImportAxiosForVue()
 
 // new ImportLodash()
-new ImportCypress()
+// new ImportCypress()
+new ImportNightWatch()
 
 
 // console.log(child_process.execSync('npm i'))

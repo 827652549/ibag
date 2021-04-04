@@ -34,6 +34,7 @@ const ImportAxiosForVue = require('./importAxiosForVue')
 
 const ImportLodash = require('./importLodash')
 const ImportCypress = require('./importCypress')
+const ImportNightWatch = require('./importNightWatch')
 
 
 
@@ -76,5 +77,6 @@ module.exports = {
   "ImportMochaForVue":[InitIbagVue],
 
   "ImportLodash":[],
-  "ImportCypress":[]
+  "ImportCypress":[],
+  "ImportNightWatch":[]
 }
