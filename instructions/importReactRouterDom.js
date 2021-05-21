@@ -1,7 +1,6 @@
 require('module-alias/register')//注册module-alias
 const { modify } = require('@/core/config-transform')
 const { spliceStringContext,addStringContext,addFirstLineContext,addItemInPackageJson } = require('@/core/context-handle')
-const globalConfig = require('@/configs/global')
 const npmPackageVersion = require('@/configs/npmPackageVersion')
 
 /**

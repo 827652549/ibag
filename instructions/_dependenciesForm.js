@@ -1,3 +1,4 @@
+//定义了所有命令的依赖关系
 const CreateDirPage = require('./createDirPage')
 const CreateDirRouter = require('./createDirRouter')
 const InitIbagReact = require('./initIbagReact')
@@ -54,7 +55,6 @@ module.exports = {
   "ImportReactRedux":[ImportReactRouterDom],
   "ImportReduxThunk":[ImportReactRedux],
   "ImportReduxSaga":[ImportReactRedux],
-  "ImportImmutable":[InitIbagReact],
   "ImportReduxImmutable":[ImportReactRedux],
   "ImportEslintForReact":[InitIbagReact],
   "ImportBootstrapForReact":[InitIbagReact],
@@ -76,6 +76,7 @@ module.exports = {
   "ImportMaterialForVue":[InitIbagVue],
   "ImportJestForVue":[InitIbagVue],
   "ImportMochaForVue":[InitIbagVue],
+  "ImportAxiosForVue":[InitIbagVue],
 
   "ImportLodash":[],
   "ImportCypress":[],
