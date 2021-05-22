@@ -28,7 +28,7 @@ var argv = require('yargs').
       })
     //启动后端服务和web
     child_process.execSync(
-      "concurrently --names \"Serve,Web\" -c \"bgBlue.bold,bgMagenta.bold\" \"node "+__dirname+"/serve/start.js\" \"npm --prefix ./web/ibag-guide-web run serve\"",{
+      "concurrently --names \"Serve,Web\" -c \"bgBlue.bold,bgMagenta.bold\" \"node "+__dirname+"/serve/start.js\" \"npm --prefix "+__dirname+"/web/ibag-guide-web run serve\"",{
           stdio: 'inherit',
       })
     //
