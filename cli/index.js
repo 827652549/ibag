@@ -28,9 +28,10 @@ var argv = require('yargs').
     //       stdio: 'inherit'
     //   })
 
+    const cwd = process.cwd()
     concurrently([
       '',
-      { command: 'node ../serve/start.js', name: 'server' },
+      { command: 'node '+cwd+'/../serve/start.js', name: 'server' },
       { command: 'npm --prefix ../web/ibag-guide-web run serve', name: 'web'},
       // { command: 'watch', name: 'watch', cwd: path.resolve(__dirname, 'scripts/watchers')}
     ], {
