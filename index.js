@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 // let CountMD = require('./countMD')
-const concurrently = require('concurrently');
+require('concurrently');
 
 var child_process = require('child_process')
 var argv = require('yargs').
@@ -22,6 +22,10 @@ var argv = require('yargs').
   // }).
   command('init', 'Run serve and open a web page for configuration', function (yargs) {
     console.log('Execution：💤')
+    child_process.execSync(
+      "npm i concurrently -g",{
+        stdio: 'inherit',
+      })
     //启动后端服务和web
     child_process.execSync(
       "concurrently --names \"Serve,Web\" -c \"bgBlue.bold,bgMagenta.bold\" \"node ./serve/start.js\" \"npm --prefix ./web/ibag-guide-web run serve\"",{
