@@ -24,7 +24,7 @@ var argv = require('yargs').
     console.log('Execution：💤')
     //启动后端服务和web
     child_process.execSync(
-      'npm run init',{
+      "concurrently --names \"Serve,Web\" -c \"bgBlue.bold,bgMagenta.bold\" \"node ./serve/start.js\" \"npm --prefix ./web/ibag-guide-web run serve\"",{
           stdio: 'inherit',
       })
     //
