@@ -1,5 +1,7 @@
 #! /usr/bin/env node
 // let CountMD = require('./countMD')
+const concurrently = require('concurrently');
+
 var child_process = require('child_process')
 var argv = require('yargs').
   command('check', 'Check the development environment of ibag', function (yargs) {
@@ -21,10 +23,21 @@ var argv = require('yargs').
   command('init', 'Run serve and open a web page for configuration', function (yargs) {
     console.log('Execution：💤')
     //启动后端服务和web
-    child_process.execSync(
-      'npm init',{
-          stdio: 'inherit'
-      })
+    // child_process.execSync(
+    //   'npm run init',{
+    //       stdio: 'inherit'
+    //   })
+
+    concurrently([
+      '',
+      { command: 'node ../serve/start.js', name: 'server' },
+      { command: 'npm --prefix ../web/ibag-guide-web run serve', name: 'web'},
+      // { command: 'watch', name: 'watch', cwd: path.resolve(__dirname, 'scripts/watchers')}
+    ], {
+      prefix: 'name',
+      // cwd: path.resolve(__dirname, 'scripts'),
+    }).then();
+
     console.log("You can now view the web page for configuration in the browser.");
 
 
