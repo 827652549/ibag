@@ -3,7 +3,7 @@
 var child_process = require('child_process')
 var argv = require('yargs').
   command('check', 'Check the development environment of ibag', function (yargs) {
-    console.log('执行命令：💤')
+    console.log('Execution：💤')
     //todo:检查node的安装情况
 
     // console.log('npm config set registry https://registry.npmjs.org')
@@ -19,14 +19,13 @@ var argv = require('yargs').
   //   // console.log('✅ 将npm源更改为：淘宝源🍑')
   // }).
   command('init', 'Run serve and open a web page for configuration', function (yargs) {
-    console.log('执行命令：💤')
-    console.log('node ../serve/start.js')
+    console.log('Execution：💤')
+    //启动后端服务和web
     child_process.execSync(
-      'node ../serve/start.js',{
+      'npm run init',{
           stdio: 'inherit'
       })
     console.log("You can now view the web page for configuration in the browser.");
-
 
 
     //todo:可选加入-o参数

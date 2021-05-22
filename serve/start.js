@@ -20,21 +20,17 @@ app.use(bodyParser());
 app.use(cors());
 
 router.post("/start", (ctx, next) => {
-  console.log("开始执行，请耐心等待……");
+  console.log("ibag running……");
   resetOutput(ctx.request.body);
   ctx.body = "Building Your Project";
-  //退出serve
-  console.log("serve over");
-  process.exit()
 });
 
 app.use(router.routes()).use(router.allowedMethods());
 
 app.listen(serveCOnfig.port,()=>{
   console.log("Service started:",`port:${serveCOnfig.port}`);
-  // console.log("Service started:",`start http://localhost:${serveCOnfig.port}`);
 });
-console.log("ibag服务启动");
+console.log("ibag serve has started");
 
 /**
  * 根据config输出到output中

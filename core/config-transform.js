@@ -141,7 +141,6 @@ function modify (deleteJson,createJson,changeJson,originPath = '../output'){
   if (changeJson){
     changeFiles(originPath,createJson)
   }
-  // console.log('function modify Over')
 }
 
 module.exports = {recovery,directory2json,deleteFiles,createFiles,modify,changeFiles}

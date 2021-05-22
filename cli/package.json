@@ -3,5 +3,10 @@
   "bin": {
     "ibag": "./index.js"
   },
-  "scripts": {}
+  "scripts": {
+    "init": "concurrently --names \"Serve,Web\" -c \"bgBlue.bold,bgMagenta.bold\" \"node ../serve/start.js\" \"npm --prefix ../web/ibag-guide-web run serve\""
+  },
+  "dependencies": {
+    "concurrently": "^6.1.0"
+  }
 }
