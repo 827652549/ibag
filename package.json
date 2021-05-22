@@ -22,8 +22,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "init": "concurrently --names \"Serve,Web\" -c \"bgBlue.bold,bgMagenta.bold\" \"node ./serve/start.js\" \"npm --prefix ./web/ibag-guide-web run serve\""
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "_moduleAliases": {
     "@": "."
