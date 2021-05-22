@@ -1,0 +1,7 @@
+{
+  "name": "ibag",
+  "bin": {
+    "ibag": "./index.js"
+  },
+  "scripts": {}
+}
