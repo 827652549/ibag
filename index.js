@@ -22,10 +22,10 @@ var argv = require('yargs').
   // }).
   command('init', 'Run serve and open a web page for configuration', function (yargs) {
     console.log('Execution：💤')
-    child_process.execSync(
-      "npm i concurrently -g",{
-        stdio: 'inherit',
-      })
+    // child_process.execSync(
+    //   "npm i concurrently -g",{
+    //     stdio: 'inherit',
+    //   })
     //启动后端服务和web
     child_process.execSync(
       "concurrently --names \"Serve,Web\" -c \"bgBlue.bold,bgMagenta.bold\" \"node "+__dirname+"/serve/start.js\" \"npm --prefix "+__dirname+"/web/ibag-guide-web run serve\"",{
