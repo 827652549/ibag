@@ -23,21 +23,22 @@ var argv = require('yargs').
   command('init', 'Run serve and open a web page for configuration', function (yargs) {
     console.log('Execution：💤')
     //启动后端服务和web
-    // child_process.execSync(
-    //   'npm run init',{
-    //       stdio: 'inherit'
-    //   })
-
-    const cwd = process.cwd()
-    concurrently([
-      '',
-      { command: 'node '+cwd+'/../serve/start.js', name: 'server' },
-      { command: 'npm --prefix ../web/ibag-guide-web run serve', name: 'web'},
-      // { command: 'watch', name: 'watch', cwd: path.resolve(__dirname, 'scripts/watchers')}
-    ], {
-      prefix: 'name',
-      // cwd: path.resolve(__dirname, 'scripts'),
-    }).then();
+    child_process.execSync(
+      'npm run init',{
+          stdio: 'inherit',
+          cwd:'../'
+      })
+    //
+    // const cwd = process.cwd()
+    // concurrently([
+    //   '',
+    //   { command: 'node '+cwd+'/../serve/start.js', name: 'server' },
+    //   { command: 'npm --prefix ../web/ibag-guide-web run serve', name: 'web'},
+    //   // { command: 'watch', name: 'watch', cwd: path.resolve(__dirname, 'scripts/watchers')}
+    // ], {
+    //   prefix: 'name',
+    //   // cwd: path.resolve(__dirname, 'scripts'),
+    // }).then();
 
     console.log("You can now view the web page for configuration in the browser.");
 

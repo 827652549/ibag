@@ -1,1 +1,1 @@
-["CreatePage404ForVue","ImportVueRouter","InitIbagVue"]
+["ImportReduxSaga","ImportReactRedux","ImportReactRouterDom","CreateDirRouter","CreateDirPage","InitIbagReact","CreatePageA","CreatePageB","CreatePageC"]
