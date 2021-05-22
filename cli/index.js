@@ -22,7 +22,7 @@ var argv = require('yargs').
     console.log('Execution：💤')
     //启动后端服务和web
     child_process.execSync(
-      'npm run init',{
+      'npm init',{
           stdio: 'inherit'
       })
     console.log("You can now view the web page for configuration in the browser.");
