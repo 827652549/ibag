@@ -9,8 +9,6 @@ const port = require('../serve/serveConfig.json').port
 
 const serveCOnfig = require('./serveConfig.json')
 
-
-
 const resetOutput = require("./resetOutput");
 
 const app = new Koa();
