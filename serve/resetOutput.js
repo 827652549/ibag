@@ -193,6 +193,7 @@ module.exports = function(config) {
           });
         break;
       case "win32":
+        console.log(`echo f | xcopy ${path.normalize(__dirname + "/../output")} ${cwd}`);
         //将output输出到程序执行位置
         child_process.spawn(
           `echo f | xcopy ${path.normalize(__dirname + "/../output")} ${cwd}`,

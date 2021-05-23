@@ -13,16 +13,11 @@ const ignoreFile = [
 
 //从某个配置文件中展开目录
 function recovery (dir,json) {
-  console.log('dir',dir);
-  console.log('JSON>>>',typeof json);
   let dirName = 'defaultName'
   json.forEach((e,index)=>{
-    console.log('FOREACH=》e:',e);
     if (Array.isArray(json)&&index===0){
-      console.log('isArray::::',Array.isArray(json));
       dirName = path.normalize(dir+e)
       if (!fs.existsSync(dirName)){
-        console.log('创建文件夹:',dirName);
         fs.mkdirSync(dirName)
       }
       return
@@ -31,7 +26,6 @@ function recovery (dir,json) {
       console.log(path.normalize(dirName)+path.normalize('/'),e[0]);
       recovery(path.normalize(dirName)+path.normalize('/'),e)
     }else {
-      console.log('写文件：',path.normalize(dirName+'/'+e.filename+'.'+e.extension));
       fs.writeFileSync(path.normalize(dirName+'/'+e.filename+'.'+e.extension),e.context)
     }
   })
