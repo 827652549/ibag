@@ -142,8 +142,6 @@ module.exports = function(config) {
   //重置清空output文件夹
   rimraf.sync(__dirname+"/../output");
   fs.mkdirSync(__dirname+"/../output");
-  console.log('cwd',process.cwd());
-  console.log('__dir',__dirname);
   fs.writeFileSync(__dirname+"/../instructions/_haveExeced.json", JSON.stringify([]),
     "utf8");
 
@@ -160,6 +158,7 @@ module.exports = function(config) {
 
   config.instructions.forEach(e => {
     let currIns = instructionsMap.get(e);
+    console.log('执行：',e,currIns);
     new currIns();
   });
 
