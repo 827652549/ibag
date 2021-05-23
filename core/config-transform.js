@@ -119,7 +119,9 @@ function deleteFiles(filePath,json){
  */
 function createFiles(filePath,json){
   //由于recovery的filePath参数和这个意义不一致，所以做个裁切
+  console.log('裁切前：',filePath);
   let parentPath = filePath.substring(0,filePath.lastIndexOf('/')+1)
+  console.log('裁切后：',parentPath);
   recovery(parentPath,json)
 }
 
@@ -135,7 +137,7 @@ function changeFiles(){
  * 修改文件changeJson：使用新的json
  * 源目录路径originPath：字符串路径即可
  */
-function modify (deleteJson,createJson,changeJson,originPath = '../output'){
+function modify (deleteJson,createJson,changeJson,originPath = path.normalize(__dirname+'/../output')){
   if (deleteJson){
     deleteFiles(originPath,deleteJson)
   }
