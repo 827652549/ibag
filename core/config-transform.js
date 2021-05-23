@@ -21,7 +21,7 @@ function recovery (dir,json) {
     if (Array.isArray(json)&&index===0){
       console.log('isArray::::',Array.isArray(json));
       dirName = path.normalize(dir+e)
-      console.log(dirName);
+      console.log("dirName",dirName,fs.existsSync(dirName),fs.statSync(dirName).isDirectory());
       if (!fs.existsSync(dirName)){
         console.log('创建文件夹:'+dirName);
         fs.mkdirSync(dirName)
@@ -53,7 +53,7 @@ function recovery (dir,json) {
 function directory2json (filePath) {
   filePath = path.resolve(filePath)
   //获取当前的目录名
-  let strs = filePath.substring(filePath.lastIndexOf('/') + 1)
+  let strs = filePath.substring(filePath.lastIndexOf(path.normalize('/')) + 1)
   //init json
   const json = [strs]
   //根据文件路径读取文件，返回文件列表
