@@ -29,16 +29,11 @@ function recovery (dir,json) {
       return
     }
     if (Array.isArray(e)){
-      recovery(path.normalize(dirName),e)
+      console.log(path.normalize(dirName)+path.normalize('/'),e[0]);
+      recovery(path.normalize(dirName)+path.normalize('/'),e)
     }else {
       console.log('写文件：',path.normalize(dirName+'/'+e.filename+'.'+e.extension));
-      fs.writeFileSync(path.normalize(dirName+'/'+e.filename+'.'+e.extension),e.context,function (err) {
-        if (err){
-          console.warn(err)
-        }else {
-          console.log(e.filename+'.'+e.extension+'写入成功')
-        }
-      })
+      fs.writeFileSync(path.normalize(dirName+'/'+e.filename+'.'+e.extension),e.context)
     }
   })
 }
