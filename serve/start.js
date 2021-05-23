@@ -5,7 +5,7 @@ const bodyParser = require("koa-bodyparser");
 const process = require('process')
 const child_process = require('child_process')
 const open = require('open');
-
+const port = require('../serve/serveConfig.json').port
 
 const serveCOnfig = require('./serveConfig.json')
 
@@ -21,7 +21,8 @@ app.use(bodyParser());
 app.use(cors());
 
 router.post("/start", (ctx, next) => {
-  ctx.set("Access-Control-Allow-Origin", "http://localhost:2078")
+  //todo:9000从外界导入
+  ctx.set("Access-Control-Allow-Origin", "http://localhost:9000")
   ctx.set('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild');
   ctx.set("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS")
   console.log("ibag running……");
