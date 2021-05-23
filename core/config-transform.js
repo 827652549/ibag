@@ -21,7 +21,6 @@ function recovery (dir,json) {
     if (Array.isArray(json)&&index===0){
       console.log('isArray::::',Array.isArray(json));
       dirName = path.normalize(dir+e)
-      console.log("dirName",dirName,fs.existsSync(dirName),fs.statSync(dirName).isDirectory());
       if (!fs.existsSync(dirName)){
         console.log('创建文件夹:',dirName);
         fs.mkdirSync(dirName)
