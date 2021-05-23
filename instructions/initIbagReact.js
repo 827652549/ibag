@@ -65,6 +65,7 @@ class InitIbagReact extends require('./_instruction') {
     super(props)
     this.run(function () {
       modify(null,createJson)
+      console.log('modify',modify);
       addItemInPackageJson(
         'dependencies',
         {
