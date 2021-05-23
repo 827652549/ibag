@@ -31,8 +31,8 @@ function recovery (dir,json) {
     if (Array.isArray(e)){
       recovery(path.normalize(dirName),e)
     }else {
-      console.log('写文件：',path.normalize(dirName+'/'+e.filename+'.'+e.extension,e.context));
-      fs.writeFileSync(path.normalize(dirName+'/'+e.filename+'.'+e.extension,e.context),function (err) {
+      console.log('写文件：',path.normalize(dirName+'/'+e.filename+'.'+e.extension));
+      fs.writeFileSync(path.normalize(dirName+'/'+e.filename+'.'+e.extension),e.context,function (err) {
         if (err){
           console.warn(err)
         }else {
