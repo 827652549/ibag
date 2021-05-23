@@ -34,11 +34,3 @@ app.listen(serveCOnfig.port,()=>{
   console.log("Service started:",`port:${serveCOnfig.port}`);
 });
 console.log("ibag serve has started");
-
-/**
- * 根据config输出到output中
- *
- */
-function resetDirOutput () {
-
-}
