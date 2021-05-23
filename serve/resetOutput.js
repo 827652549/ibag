@@ -158,7 +158,6 @@ module.exports = function(config) {
 
   config.instructions.forEach(e => {
     let currIns = instructionsMap.get(e);
-    console.log('执行：',e,currIns);
     new currIns();
   });
 

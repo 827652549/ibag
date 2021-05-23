@@ -130,7 +130,7 @@ function changeFiles(){
  * 修改文件changeJson：使用新的json
  * 源目录路径originPath：字符串路径即可
  */
-function modify (deleteJson,createJson,changeJson,originPath = '../output'){
+function modify (deleteJson,createJson,changeJson,originPath = __dirname+'/../output'){
   if (deleteJson){
     deleteFiles(originPath,deleteJson)
   }

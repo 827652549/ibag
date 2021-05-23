@@ -77,9 +77,9 @@ function addFirstLineContext (contextPtah, text) {
  * obj是{react:^1.0.0}
  */
 function addItemInPackageJson (currKey,obj) {
-  let json = JSON.parse(fs.readFileSync('../output/package.json','utf8'))
+  let json = JSON.parse(fs.readFileSync(__dirname+'/../output/package.json','utf8'))
   json[currKey] = merge(json[currKey] || {},obj)
-  fs.writeFileSync('../output/package.json',JSON.stringify(json),'utf8')
+  fs.writeFileSync(__dirname+'/../output/package.json',JSON.stringify(json),'utf8')
 }
 
 /**
