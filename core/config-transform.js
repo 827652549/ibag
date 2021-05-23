@@ -13,10 +13,12 @@ const ignoreFile = [
 
 //从某个配置文件中展开目录
 function recovery (dir,json) {
-  console.log('JSON>>>',json);
+  console.log('JSON>>>',typeof json);
   let dirName = 'defaultName'
   json.forEach((e,index)=>{
+    console.log('FOREACH=》e:',e);
     if (Array.isArray(json)&&index===0){
+      console.log('isArray::::',Array.isArray(json));
       dirName = dir+'/'+e
       if (!fs.existsSync(dirName)){
         console.log('创建文件夹:'+dirName);
