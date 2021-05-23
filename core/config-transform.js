@@ -86,16 +86,16 @@ function deleteFiles(filePath,json){
   //获取在相对于电脑的绝对路径
   filePath = path.resolve(filePath)
   //获取当前的目录名
-  let currPath = filePath.substring(filePath.lastIndexOf('/') + 1)
+  let currPath = filePath.substring(filePath.lastIndexOf(path.normalize('/')) + 1)
   if (currPath===json[0]){
     //根据规定的格式，如果json的长度大于1，指定删除该目录的文件
     if (json.length>1){
       for (let i = 1; i < json.length; i++) {
         if (Array.isArray(json[i])){
-          deleteFiles(filePath+'/'+json[i][0],json[i])
+          deleteFiles(path.normalize(filePath+'/'+json[i][0]),json[i])
         }else {
           console.log('delete文件: '+filePath+'/'+json[i].filename+'.'+json[i].extension)
-          del.sync([filePath+'/'+json[i].filename+'.'+json[i].extension],{force:true});
+          del.sync([path.normalize(filePath+'/'+json[i].filename+'.'+json[i].extension)],{force:true});
         }
       }
     }else {

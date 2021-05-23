@@ -10,6 +10,7 @@ const { spliceStringContext, addStringContext, addFirstLineContext, addItemInPac
 const ncu = require("npm-check-updates");
 // const children_process
 const child_process = require("child_process");
+const process = require("process");
 const path = require('path')
 
 
@@ -175,9 +176,20 @@ module.exports = function(config) {
     //执行程序的路径
     let cwd = process.cwd()
     console.log('执行程序的路径',cwd);
+
+    const currOS = (()=>{
+      switch (process.platform) {
+        //MacOS,IOS etc
+        case "darwin":
+        case "linux":
+          return "cp";
+        case "win32":return 'XCOPY';
+        default:throw new Error('系统判断失败，拷贝命令错误');
+      }
+    })()
     //将output输出到程序执行位置
     child_process.spawn(
-      'cp',['-r', path.normalize(__dirname+'/../output'), cwd],
+      currOS,['-r', path.normalize(__dirname+'/../output'), cwd],
       {
         stdio: 'inherit'
       })
