@@ -1,5 +1,7 @@
 #! /usr/bin/env node
-// let CountMD = require('./countMD')
+
+const path = require('path')
+
 require('concurrently');
 
 var child_process = require('child_process')
@@ -8,7 +10,7 @@ var argv = require('yargs').
     console.log('Execution：💤')
     //启动后端服务和web
     child_process.execSync(
-      "npx concurrently --names \"Serve,Web\" -c \"bgBlue.bold,bgMagenta.bold\" \"node "+__dirname+"/serve/start.js\" \"npm --prefix "+__dirname+"/web/ibag-guide-web run serve -o\"",{
+      `npx concurrently --names "Serve,Web" -c "bgBlue.bold,bgMagenta.bold" "node ${path.normalize(__dirname+"/serve/start.js")}" "npm --prefix ${path.normalize(__dirname+"/web/ibag-guide-web")} run serve -o"`,{
           stdio: 'inherit',
       })
     console.log("You can now view the web page for configuration in the browser.");
