@@ -22,8 +22,8 @@ function recovery (dir,json) {
       console.log('isArray::::',Array.isArray(json));
       dirName = path.normalize(dir+e)
       console.log("dirName",dirName,fs.existsSync(dirName),fs.statSync(dirName).isDirectory());
-      if (fs.existsSync(dirName)){
-        console.log('创建文件夹:'+dirName);
+      if (!fs.existsSync(dirName)){
+        console.log('创建文件夹:',dirName);
         fs.mkdirSync(dirName)
       }
       return
@@ -31,6 +31,7 @@ function recovery (dir,json) {
     if (Array.isArray(e)){
       recovery(path.normalize(dirName),e)
     }else {
+      console.log('写文件：',path.normalize(dirName+'/'+e.filename+'.'+e.extension,e.context));
       fs.writeFileSync(path.normalize(dirName+'/'+e.filename+'.'+e.extension,e.context),function (err) {
         if (err){
           console.warn(err)
