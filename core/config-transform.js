@@ -13,11 +13,13 @@ const ignoreFile = [
 
 //从某个配置文件中展开目录
 function recovery (dir,json) {
+  console.log('JSON>>>',json);
   let dirName = 'defaultName'
   json.forEach((e,index)=>{
     if (Array.isArray(json)&&index===0){
       dirName = dir+'/'+e
       if (!fs.existsSync(dirName)){
+        console.log('创建文件夹:'+dirName);
         fs.mkdirSync(dirName)
       }
       return
@@ -135,7 +137,6 @@ function modify (deleteJson,createJson,changeJson,originPath = '../output'){
     deleteFiles(originPath,deleteJson)
   }
   if (createJson){
-    console.log('创建文件',createJson);
     createFiles(originPath,createJson)
   }
   //todo:changeFiles
