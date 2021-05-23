@@ -4,6 +4,7 @@ const preferDefault = m => (m && m.default) || m
 
 
 exports.components = {
+  "component---src-pages-404-js": preferDefault(require("/Users/junking/WebstormProjects/ibag-temp/web/ibag-guide-web/src/pages/404.js")),
   "component---src-pages-index-js": preferDefault(require("/Users/junking/WebstormProjects/ibag-temp/web/ibag-guide-web/src/pages/index.js")),
   "component---src-pages-step-1-js": preferDefault(require("/Users/junking/WebstormProjects/ibag-temp/web/ibag-guide-web/src/pages/step1.js")),
   "component---src-pages-step-2-js": preferDefault(require("/Users/junking/WebstormProjects/ibag-temp/web/ibag-guide-web/src/pages/step2.js")),
