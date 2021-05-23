@@ -1,0 +1,139 @@
+{
+  "namedChunkGroups": {
+    "polyfill": {
+      "name": "polyfill",
+      "assets": [
+        {
+          "name": "webpack-runtime-2f3553b7e11781cab964.js",
+          "size": 4482
+        },
+        {
+          "name": "polyfill-0c03c35b53de112896b4.js",
+          "size": 82658
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 87140,
+      "filteredAuxiliaryAssets": 2,
+      "auxiliaryAssetsSize": 219188
+    },
+    "app": {
+      "name": "app",
+      "assets": [
+        {
+          "name": "webpack-runtime-2f3553b7e11781cab964.js",
+          "size": 4482
+        },
+        {
+          "name": "framework-1f8db60c4f6292df0945.js",
+          "size": 128904
+        },
+        {
+          "name": "app-092b0bb8ba9971ed6a6d.js",
+          "size": 50080
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 183466,
+      "filteredAuxiliaryAssets": 3,
+      "auxiliaryAssetsSize": 547568
+    },
+    "component---src-pages-index-js": {
+      "name": "component---src-pages-index-js",
+      "assets": [
+        {
+          "name": "styles.6ef80c6e29390593d77a.css",
+          "size": 6240
+        },
+        {
+          "name": "component---src-pages-index-js-c80e03334d0574ccfd31.js",
+          "size": 29559
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 35799,
+      "filteredAuxiliaryAssets": 1,
+      "auxiliaryAssetsSize": 101482
+    },
+    "component---src-pages-step-1-js": {
+      "name": "component---src-pages-step-1-js",
+      "assets": [
+        {
+          "name": "component---src-pages-step-1-js-3e7649e324b4da6e2492.js",
+          "size": 1656
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 1656,
+      "filteredAuxiliaryAssets": 1,
+      "auxiliaryAssetsSize": 3760
+    },
+    "component---src-pages-step-2-js": {
+      "name": "component---src-pages-step-2-js",
+      "assets": [
+        {
+          "name": "component---src-pages-step-2-js-2aab55f7ed47f6b4b6d4.js",
+          "size": 1286
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 1286,
+      "filteredAuxiliaryAssets": 1,
+      "auxiliaryAssetsSize": 3600
+    },
+    "component---src-pages-step-3-js": {
+      "name": "component---src-pages-step-3-js",
+      "assets": [
+        {
+          "name": "component---src-pages-step-3-js-85d51d468bc07c84e43c.js",
+          "size": 1098
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 1098,
+      "filteredAuxiliaryAssets": 1,
+      "auxiliaryAssetsSize": 2513
+    },
+    "component---src-pages-step-4-js": {
+      "name": "component---src-pages-step-4-js",
+      "assets": [
+        {
+          "name": "component---src-pages-step-4-js-43d2cd01cc6667f923b2.js",
+          "size": 2383
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 2383,
+      "filteredAuxiliaryAssets": 1,
+      "auxiliaryAssetsSize": 4531
+    }
+  },
+  "assetsByChunkName": {
+    "polyfill": [
+      "webpack-runtime-2f3553b7e11781cab964.js",
+      "polyfill-0c03c35b53de112896b4.js"
+    ],
+    "app": [
+      "webpack-runtime-2f3553b7e11781cab964.js",
+      "framework-1f8db60c4f6292df0945.js",
+      "app-092b0bb8ba9971ed6a6d.js"
+    ],
+    "component---src-pages-index-js": [
+      "styles.6ef80c6e29390593d77a.css",
+      "component---src-pages-index-js-c80e03334d0574ccfd31.js"
+    ],
+    "component---src-pages-step-1-js": [
+      "component---src-pages-step-1-js-3e7649e324b4da6e2492.js"
+    ],
+    "component---src-pages-step-2-js": [
+      "component---src-pages-step-2-js-2aab55f7ed47f6b4b6d4.js"
+    ],
+    "component---src-pages-step-3-js": [
+      "component---src-pages-step-3-js-85d51d468bc07c84e43c.js"
+    ],
+    "component---src-pages-step-4-js": [
+      "component---src-pages-step-4-js-43d2cd01cc6667f923b2.js"
+    ]
+  },
+  "childAssetsByChunkName": {}
+}
