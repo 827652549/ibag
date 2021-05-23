@@ -35,14 +35,14 @@ class _instruction {
   run = function (execFun) {
     //引入haveExeced.json，性能优化，已经执行过的指令不再重复执行。
     //这个位置的路径不能以当前文件为基准写相对路径，此匿名函数并非在此处调用，是调用处的相对路径，即src/serve/resetOutput.js
-    let haveExeced = JSON.parse(fs.readFileSync('../instructions/_haveExeced.json','utf8'))
+    let haveExeced = JSON.parse(fs.readFileSync(__dirname+'/../instructions/_haveExeced.json','utf8'))
     if (haveExeced.indexOf(this.constructor.name)!==-1){
       return
     }else {
       haveExeced.push(this.constructor.name)
       // console.log(haveExeced)
-      fs.writeFileSync('../instructions/_haveExeced.json',JSON.stringify(haveExeced),'utf8')
-      this.dependencies(require('../instructions/_dependenciesForm.js')[this.constructor.name])
+      fs.writeFileSync(__dirname+'/../instructions/_haveExeced.json',JSON.stringify(haveExeced),'utf8')
+      this.dependencies(require(__dirname+'/../instructions/_dependenciesForm.js')[this.constructor.name])
       this.execution(execFun)
     }
 
