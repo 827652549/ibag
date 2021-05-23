@@ -141,6 +141,8 @@ const run = (globalConfig, fun) => {
 module.exports = function(config) {
   //重置清空output文件夹
   rimraf.sync(__dirname+"/../output");
+  console.log(fs.statSync(__dirname+"/../output").isDirectory())
+  console.log(fs.statSync(__dirname+"/../output"))
   fs.mkdirSync(__dirname+"/../output");
   fs.writeFileSync(__dirname+"/../instructions/_haveExeced.json", JSON.stringify([]),
     "utf8");

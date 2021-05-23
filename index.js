@@ -8,11 +8,10 @@ var argv = require('yargs').
     console.log('Execution：💤')
     //启动后端服务和web
     child_process.execSync(
-      "npx concurrently --names \"Serve,Web\" -c \"bgBlue.bold,bgMagenta.bold\" \"node "+__dirname+"/serve/start.js\" \"npm --prefix "+__dirname+"/web/ibag-guide-web run serve\"",{
+      "npx concurrently --names \"Serve,Web\" -c \"bgBlue.bold,bgMagenta.bold\" \"node "+__dirname+"/serve/start.js\" \"npm --prefix "+__dirname+"/web/ibag-guide-web run serve -o\"",{
           stdio: 'inherit',
       })
     console.log("You can now view the web page for configuration in the browser.");
-    //todo:可选加入-o参数
   }).
   usage(`                                                                
 ██╗ ██████╗   █████╗   ██████╗ 🎒
