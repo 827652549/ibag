@@ -193,10 +193,10 @@ module.exports = function(config) {
           });
         break;
       case "win32":
-        `echo f | xcopy ${path.normalize(__dirname + "/../output")} ${path.normalize(cwd+'/output')}`;
+        `echo d | xcopy ${path.normalize(__dirname + "/../output")} ${path.normalize(cwd+'/output')}`;
         //将output输出到程序执行位置
         child_process.spawn(
-          `echo f | xcopy ${path.normalize(__dirname + "/../output")} ${path.normalize(cwd+'/output')}`,
+          `echo d | xcopy ${path.normalize(__dirname + "/../output")} ${path.normalize(cwd+'/output')}`,
           {
             stdio: "inherit"
           });
