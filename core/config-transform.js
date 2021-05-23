@@ -23,7 +23,7 @@ function recovery (dir,json) {
       return
     }
     if (Array.isArray(e)){
-      console.log(path.normalize(dirName)+path.normalize('/'),e[0]);
+      // console.log(path.normalize(dirName)+path.normalize('/'),e[0]);
       recovery(path.normalize(dirName)+path.normalize('/'),e)
     }else {
       fs.writeFileSync(path.normalize(dirName+'/'+e.filename+'.'+e.extension),e.context)
@@ -88,12 +88,12 @@ function deleteFiles(filePath,json){
         if (Array.isArray(json[i])){
           deleteFiles(path.normalize(filePath+'/'+json[i][0]),json[i])
         }else {
-          console.log('delete文件: '+filePath+'/'+json[i].filename+'.'+json[i].extension)
+          // console.log('delete文件: '+filePath+'/'+json[i].filename+'.'+json[i].extension)
           del.sync([path.normalize(filePath+'/'+json[i].filename+'.'+json[i].extension)],{force:true});
         }
       }
     }else {
-      console.log('delete目录: '+filePath)
+      // console.log('delete目录: '+filePath)
       del.sync([filePath],{force:true});
     }
   }else {

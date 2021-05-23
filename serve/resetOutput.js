@@ -171,7 +171,7 @@ module.exports = function(config) {
   run(globalConfig, function() {
     //todo:运行更新完依赖后，需要做的事情：如
     console.log("ibag已为您创建好您的初始化项目。");
-    console.log("🚗 您的项目被输出到output目录中，请查收📦～");
+    console.log("您的项目被输出到output目录中，请查收～");
 
     //初始化global.json为默认配置
     fs.writeFileSync(path.normalize(__dirname + "/../configs/global.json"),
@@ -193,7 +193,7 @@ module.exports = function(config) {
           });
         break;
       case "win32":
-        console.log('win32环境：',`echo d | xcopy ${path.normalize(__dirname + "/../output")} ${path.normalize(cwd+'/output')}`);
+        console.log('win环境：',`echo a | xcopy ${path.normalize(__dirname + "/../output")} ${path.normalize(cwd+'/output')} /E`);
         //将output输出到程序执行位置
         child_process.execSync(
           `echo a | xcopy ${path.normalize(__dirname + "/../output")} ${path.normalize(cwd+'/output')} /E`,
