@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios"
+const port = require('../../../../serve/serveConfig.json').port
 
 import "tailwindcss/tailwind.css"
 import Step1 from "../pages/step1"
@@ -102,7 +103,7 @@ const Home = ()=>{
   function onClickOnStep4() {
     console.log(config)
     axios
-      .post("http://localhost:2077/start", config)
+      .post("http://localhost:"+port+"/start", config)
       .then(function (res) {
         console.log("web触发", res)
       })

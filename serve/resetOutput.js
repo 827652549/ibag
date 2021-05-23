@@ -176,6 +176,7 @@ module.exports = function(config) {
       "utf8");
     //执行程序的路径
     let cwd = process.cwd()
+    console.log('执行程序的路径',cwd);
     //将output输出到程序执行位置
     child_process.spawn(
       'cp',['-r', '../output', cwd],
