@@ -9,9 +9,9 @@ var argv = require('yargs').
   command('init', 'Run serve and open a web page for configuration', function (yargs) {
     console.log('Execution：💤')
     //启动后端服务和web
-    console.log('当前命令：',`concurrently --names "Serve,Web" -c "bgBlue.bold,bgMagenta.bold" "node ${path.normalize(__dirname+"/serve/start.js")}" "npm --prefix ${path.normalize(__dirname+"/web/ibag-guide-web")} run serve -o"`);
+    console.log('当前命令：',`concurrently --names "Serve,Web" -c "bgBlue.bold,bgMagenta.bold" "node ${path.normalize(__dirname+"/serve/start.js")}" "npm --prefix ${path.normalize(__dirname+"/web/ibag-guide-web")} run serve"`);
     child_process.execSync(
-      `concurrently --names "Serve,Web" -c "bgBlue.bold,bgMagenta.bold" "node ${path.normalize(__dirname+"/serve/start.js")}" "npm --prefix ${path.normalize(__dirname+"/web/ibag-guide-web")} run serve -o"`,{
+      `concurrently --names "Serve,Web" -c "bgBlue.bold,bgMagenta.bold" "node ${path.normalize(__dirname+"/serve/start.js")}" "npm --prefix ${path.normalize(__dirname+"/web/ibag-guide-web")} run serve"`,{
           stdio: 'inherit',
       })
     console.log("You can now view the web page for configuration in the browser.");

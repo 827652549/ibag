@@ -1,5 +1,6 @@
 const fs = require('fs')
 const merge = require('lodash/merge')
+const path = require('path')
 
 /**
  * 基于context修改匹配字符串的第一个文本
@@ -8,7 +9,7 @@ const merge = require('lodash/merge')
  * @param text
  */
 function spliceStringContext (contextPtah, str, text) {
-  contextPtah = __dirname+"/"+ contextPtah
+  contextPtah = path.normalize(__dirname+"/"+ contextPtah)
   let context = fs.readFileSync(contextPtah, 'utf8')
   context = context.replace(str, text)
   fs.writeFileSync(contextPtah, context, 'utf8')
@@ -22,7 +23,7 @@ function spliceStringContext (contextPtah, str, text) {
  * @param text
  */
 function spliceFunctionContext (contextPtah, funName, text) {
-  contextPtah = __dirname+"/"+ contextPtah
+  contextPtah = path.normalize(__dirname+"/"+ contextPtah)
 
 }
 
@@ -32,7 +33,7 @@ function spliceFunctionContext (contextPtah, funName, text) {
  * @param str
  */
 function deleteStringContext (contextPtah, str) {
-  contextPtah = __dirname+"/"+ contextPtah
+  contextPtah = path.normalize(__dirname+"/"+ contextPtah)
 
 }
 
@@ -42,7 +43,7 @@ function deleteStringContext (contextPtah, str) {
  * @param funName 被删除的函数名
  */
 function deleteFunctionContext (contextPtah, funName) {
-  contextPtah = __dirname+"/"+ contextPtah
+  contextPtah = path.normalize(__dirname+"/"+ contextPtah)
 
 }
 
@@ -54,7 +55,7 @@ function deleteFunctionContext (contextPtah, funName) {
  * @param text
  */
 function addStringContext (contextPtah, target, direction, text) {
-  contextPtah = __dirname+"/"+ contextPtah
+  contextPtah = path.normalize(__dirname+"/"+ contextPtah)
   let context = fs.readFileSync(contextPtah, 'utf8')
   let resultStr
   if (direction === 'left') {
@@ -71,7 +72,7 @@ function addStringContext (contextPtah, target, direction, text) {
  * 在首行内添加内容
  */
 function addFirstLineContext (contextPtah, text) {
-  contextPtah = __dirname+"/"+ contextPtah
+  contextPtah = path.normalize(__dirname+"/"+ contextPtah)
   let context = fs.readFileSync(contextPtah, 'utf8')
     context = text + context
     fs.writeFileSync(contextPtah, context, 'utf8')
@@ -83,16 +84,16 @@ function addFirstLineContext (contextPtah, text) {
  * obj是{react:^1.0.0}
  */
 function addItemInPackageJson (currKey,obj) {
-  let json = JSON.parse(fs.readFileSync(__dirname+'/../output/package.json','utf8'))
+  let json = JSON.parse(fs.readFileSync(path.normalize(__dirname+'/../output/package.json'),'utf8'))
   json[currKey] = merge(json[currKey] || {},obj)
-  fs.writeFileSync(__dirname+'/../output/package.json',JSON.stringify(json),'utf8')
+  fs.writeFileSync(path.normalize(__dirname+'/../output/package.json'),JSON.stringify(json),'utf8')
 }
 
 /**
  * 在package.json中删除项
  */
 function deleteItemInPackageJson (key) {
-  contextPtah = __dirname+"/"+ contextPtah
+  contextPtah = path.normalize(__dirname+"/"+ contextPtah)
 
 }
 
