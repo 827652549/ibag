@@ -140,11 +140,11 @@ const run = (globalConfig, fun) => {
 
 module.exports = function(config) {
   //重置清空output文件夹
-  rimraf.sync(__dirname+"../output");
-  fs.mkdirSync(__dirname+"../output");
+  rimraf.sync(__dirname+"/../output");
+  fs.mkdirSync(__dirname+"/../output");
   console.log('cwd',process.cwd());
   console.log('__dir',__dirname);
-  fs.writeFileSync(__dirname+"../instructions/_haveExeced.json", JSON.stringify([]),
+  fs.writeFileSync(__dirname+"/../instructions/_haveExeced.json", JSON.stringify([]),
     "utf8");
 
   //将拓展配置写入全局配置@/configs/global.json中
@@ -153,7 +153,7 @@ module.exports = function(config) {
   globalConfig.name = config.extends.name;
   globalConfig.license = config.extends.license;
 
-  fs.writeFileSync(__dirname+"../configs/global.json", JSON.stringify(globalConfig),
+  fs.writeFileSync(__dirname+"/../configs/global.json", JSON.stringify(globalConfig),
     "utf8");
 
   const instructionsMap = mergeAllInstructions();
@@ -173,14 +173,14 @@ module.exports = function(config) {
     console.log("🚗 您的项目被输出到output目录中，请查收📦～");
 
     //初始化global.json为默认配置
-    fs.writeFileSync(__dirname+"../configs/global.json", JSON.stringify(globalConfigInit),
+    fs.writeFileSync(__dirname+"/../configs/global.json", JSON.stringify(globalConfigInit),
       "utf8");
     //执行程序的路径
     let cwd = process.cwd()
     console.log('执行程序的路径',cwd);
     //将output输出到程序执行位置
     child_process.spawn(
-      'cp',['-r', __dirname+'../output', cwd],
+      'cp',['-r', __dirname+'/../output', cwd],
       {
         stdio: 'inherit'
       })
