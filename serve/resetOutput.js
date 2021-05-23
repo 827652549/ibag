@@ -11,8 +11,7 @@ const ncu = require("npm-check-updates");
 // const children_process
 const child_process = require("child_process");
 const process = require("process");
-const path = require('path')
-
+const path = require("path");
 
 const CreatePageA = require("../instructions/createPageA");
 const CreatePageB = require("../instructions/createPageB");
@@ -31,7 +30,8 @@ const ImportBootstrapForReact = require(
   "../instructions/importBootstrapForReact");
 const ImportAntDesignForReact = require(
   "../instructions/importAntDesignForReact");
-const ImportMaterialForReact = require("../instructions/importMaterialForReact");
+const ImportMaterialForReact = require(
+  "../instructions/importMaterialForReact");
 const ImportJestForReact = require("../instructions/importJestForReact");
 const ImportMochaForReact = require("../instructions/importMochaForReact");
 const ImportAxiosForReact = require("../instructions/importAxiosForReact");
@@ -123,7 +123,7 @@ const mergeAllInstructions = () => {
  */
 const upgraded = async () => {
   console.log("npm依赖包更新到最新版：", await ncu.run({
-    packageFile: path.normalize(__dirname+"/../output/package.json"),
+    packageFile: path.normalize(__dirname + "/../output/package.json"),
     upgrade: true,
     // Pass any cli option.
     // Defaults:
@@ -143,9 +143,11 @@ const run = (globalConfig, fun) => {
 
 module.exports = function(config) {
   //重置清空output文件夹
-  rimraf.sync(path.normalize(__dirname+"/../output"));
-  fs.mkdirSync(path.normalize(__dirname+"/../output"));
-  fs.writeFileSync(path.normalize(__dirname+"/../instructions/_haveExeced.json"), JSON.stringify([]),
+  rimraf.sync(path.normalize(__dirname + "/../output"));
+  fs.mkdirSync(path.normalize(__dirname + "/../output"));
+  fs.writeFileSync(
+    path.normalize(__dirname + "/../instructions/_haveExeced.json"),
+    JSON.stringify([]),
     "utf8");
 
   //将拓展配置写入全局配置@/configs/global.json中
@@ -154,7 +156,8 @@ module.exports = function(config) {
   globalConfig.name = config.extends.name;
   globalConfig.license = config.extends.license;
 
-  fs.writeFileSync(path.normalize(__dirname+"/../configs/global.json"), JSON.stringify(globalConfig),
+  fs.writeFileSync(path.normalize(__dirname + "/../configs/global.json"),
+    JSON.stringify(globalConfig),
     "utf8");
 
   const instructionsMap = mergeAllInstructions();
@@ -171,29 +174,35 @@ module.exports = function(config) {
     console.log("🚗 您的项目被输出到output目录中，请查收📦～");
 
     //初始化global.json为默认配置
-    fs.writeFileSync(path.normalize(__dirname+"/../configs/global.json"), JSON.stringify(globalConfigInit),
+    fs.writeFileSync(path.normalize(__dirname + "/../configs/global.json"),
+      JSON.stringify(globalConfigInit),
       "utf8");
     //执行程序的路径
-    let cwd = process.cwd()
-    console.log('执行程序的路径',cwd);
+    let cwd = process.cwd();
+    console.log("执行程序的路径", cwd);
 
-    const currOS = (()=>{
-      switch (process.platform) {
-        //MacOS,IOS etc
-        case "darwin":
-        case "linux":
-          return "cp";
-        case "win32":return 'XCOPY';
-        default:throw new Error('系统判断失败，拷贝命令错误');
-      }
-    })()
     //将output输出到程序执行位置
-    child_process.spawn(
-      currOS,['-r', path.normalize(__dirname+'/../output'), cwd],
-      {
-        stdio: 'inherit'
-      })
-
+    switch (process.platform) {
+      case "darwin":
+      case "linux":
+        // //MacOS,IOS etc:
+        child_process.spawn(
+          "cp", ["-r", path.normalize(__dirname + "/../output"), cwd],
+          {
+            stdio: "inherit"
+          });
+        break;
+      case "win32":
+        //将output输出到程序执行位置
+        child_process.spawn(
+          `echo f | xcopy ${path.normalize(__dirname + "/../output")} ${cwd}`,
+          {
+            stdio: "inherit"
+          });
+        break;
+      default:
+        throw new Error("系统判断失败，拷贝命令错误");
+    }
   });
 
 };
