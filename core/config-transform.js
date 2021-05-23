@@ -109,9 +109,7 @@ function deleteFiles(filePath,json){
  */
 function createFiles(filePath,json){
   //由于recovery的filePath参数和这个意义不一致，所以做个裁切
-  console.log('裁切前：',filePath);
   let parentPath = filePath.substring(0,filePath.lastIndexOf(path.normalize('/'))+1)
-  console.log('裁切后：',parentPath);
   recovery(parentPath,json)
 }
 
