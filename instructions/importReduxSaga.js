@@ -20,7 +20,6 @@ class ImportReduxSaga extends require('./_instruction') {
   constructor (props) {
     super(props)
     this.run(function () {
-      console.log('modify',modify);
       modify(null,[
         'output',
         [

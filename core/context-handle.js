@@ -8,6 +8,7 @@ const merge = require('lodash/merge')
  * @param text
  */
 function spliceStringContext (contextPtah, str, text) {
+  contextPtah = __dirname+"/"+ contextPtah
   let context = fs.readFileSync(contextPtah, 'utf8')
   context = context.replace(str, text)
   fs.writeFileSync(contextPtah, context, 'utf8')
@@ -21,6 +22,7 @@ function spliceStringContext (contextPtah, str, text) {
  * @param text
  */
 function spliceFunctionContext (contextPtah, funName, text) {
+  contextPtah = __dirname+"/"+ contextPtah
 
 }
 
@@ -30,6 +32,7 @@ function spliceFunctionContext (contextPtah, funName, text) {
  * @param str
  */
 function deleteStringContext (contextPtah, str) {
+  contextPtah = __dirname+"/"+ contextPtah
 
 }
 
@@ -39,6 +42,7 @@ function deleteStringContext (contextPtah, str) {
  * @param funName 被删除的函数名
  */
 function deleteFunctionContext (contextPtah, funName) {
+  contextPtah = __dirname+"/"+ contextPtah
 
 }
 
@@ -50,6 +54,7 @@ function deleteFunctionContext (contextPtah, funName) {
  * @param text
  */
 function addStringContext (contextPtah, target, direction, text) {
+  contextPtah = __dirname+"/"+ contextPtah
   let context = fs.readFileSync(contextPtah, 'utf8')
   let resultStr
   if (direction === 'left') {
@@ -66,6 +71,7 @@ function addStringContext (contextPtah, target, direction, text) {
  * 在首行内添加内容
  */
 function addFirstLineContext (contextPtah, text) {
+  contextPtah = __dirname+"/"+ contextPtah
   let context = fs.readFileSync(contextPtah, 'utf8')
     context = text + context
     fs.writeFileSync(contextPtah, context, 'utf8')
@@ -86,6 +92,7 @@ function addItemInPackageJson (currKey,obj) {
  * 在package.json中删除项
  */
 function deleteItemInPackageJson (key) {
+  contextPtah = __dirname+"/"+ contextPtah
 
 }
 
