@@ -190,11 +190,12 @@ module.exports = function(config) {
       case "darwin":
       case "linux":
         // //MacOS,IOS etc:
-        child_process.spawn(
-          "cp", ["-r", path.normalize(__dirname + "/../output"), cwd],
+        child_process.execSync(
+          `rm -rf ${cwd} | cp -R path.normalize(__dirname + "/../output") ${cwd}`,
           {
             stdio: "inherit"
-          });
+          }
+        )
         break;
       case "win32":
         console.log('win环境：',`echo a | xcopy ${path.normalize(__dirname + "/../output")} ${path.normalize(cwd+'/output')} /E`);
