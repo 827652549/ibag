@@ -1,6 +1,6 @@
 {
   "name": "ibag",
-  "version": "0.0.60",
+  "version": "0.0.61",
   "description": "通用型前端工程化CLI脚手架（暂未开发，先留个坑位）",
   "main": "index.js",
   "bin": {
