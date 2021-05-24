@@ -1,0 +1,62 @@
+{
+  "name": "8",
+  "description": "",
+  "author": "",
+  "license": "",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "e2e": "node_modules/.bin/cypress open",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11",
+    "ant-design-vue": "^1.7.4",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0",
+    "lodash": "^4.17.21",
+    "axios": "^0.21.1",
+    "vue-axios": "^3.2.4"
+  },
+  "devDependencies": {
+    "@vue/cli-service": "~4.5.0",
+    "vue-template-compiler": "^2.6.11",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-plugin-unit-mocha": "~4.5.0",
+    "@vue/test-utils": "^1.0.3",
+    "chai": "^4.3.4",
+    "cypress": "^6.8.0",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.23.0",
+    "eslint-plugin-vue": "^6.2.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "eslintConfig": {
+    "rules": {
+      "no-undef": 0
+    },
+    "env": {
+      "mocha": true,
+      "node": true
+    },
+    "root": true,
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  }
+}

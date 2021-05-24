@@ -60,7 +60,6 @@ const ImportNightWatch = require("../instructions/importNightWatch");
 // fs.writeFileSync('./config.json',JSON.stringify(outJson))
 // console.log(outJson)
 
-//todo：(一)生成package.json
 
 // console.log(child_process.execSync('npm i'))
 
@@ -166,6 +165,11 @@ module.exports = function(config) {
     let currIns = instructionsMap.get(e);
     new currIns();
   });
+
+  child_process.execSync('npm run prettier',{
+    cwd:path.normalize(__dirname+"/../")
+  })
+  console.log('代码已格式化！')
 
   //todo：初始化packege.json之后需要做的事情
   run(globalConfig, function() {
