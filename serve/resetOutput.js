@@ -191,7 +191,7 @@ module.exports = function(config) {
       case "linux":
         // //MacOS,IOS etc:
         child_process.execSync(
-          `rm -rf ${cwd} | cp -R path.normalize(__dirname + "/../output") ${cwd}`,
+          `rm -rf ${cwd} | cp -R ${path.normalize(__dirname + "/../output")} ${cwd}`,
           {
             stdio: "inherit"
           }
