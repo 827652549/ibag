@@ -184,6 +184,9 @@ module.exports = function(config) {
     let cwd = process.cwd();
     console.log("执行程序的路径", cwd);
 
+    //先删除已存在的output目录
+    rimraf.sync(path.normalize(cwd + "/output"));
+
     //将output输出到程序执行位置
     switch (process.platform) {
       case "darwin":
