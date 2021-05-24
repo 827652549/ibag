@@ -175,7 +175,6 @@ module.exports = function(config) {
   run(globalConfig, function() {
     //todo:运行更新完依赖后，需要做的事情：如
     console.log("ibag已为您创建好您的初始化项目。");
-    console.log("您的项目被输出到output目录中，请查收～");
 
     //初始化global.json为默认配置
     fs.writeFileSync(path.normalize(__dirname + "/../configs/global.json"),
@@ -191,7 +190,9 @@ module.exports = function(config) {
       case "linux":
         // //MacOS,IOS etc:
         child_process.execSync(
-          `rm -rf ${cwd} | cp -R ${path.normalize(__dirname + "/../output")} ${cwd}`,
+          // `rm -rf ${cwd+path.normalize('/output')} && cp -R ${path.normalize(__dirname + "/../output")} ${cwd}`,
+          // 为了完成替换，删除再拷贝，是最好的形式。但是rm太危险了，以防万一暂不使用
+          `cp -R ${path.normalize(__dirname + "/../output")} ${cwd}`,
           {
             stdio: "inherit"
           }
@@ -209,6 +210,7 @@ module.exports = function(config) {
       default:
         throw new Error("系统判断失败，拷贝命令错误");
     }
+    console.log(`您的项目被输出到${path.normalize(cwd+'/output')}目录中，请查收～`);
   });
 
 };
