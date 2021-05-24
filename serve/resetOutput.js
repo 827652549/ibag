@@ -205,7 +205,7 @@ module.exports = function(config) {
         console.log('win环境：',`echo a | xcopy ${path.normalize(__dirname + "/../output")} ${path.normalize(cwd+'/output')} /E`);
         //将output输出到程序执行位置
         child_process.execSync(
-          `echo a | xcopy ${path.normalize(__dirname + "/../output")} ${path.normalize(cwd+'/output')} /E`,
+          `echo d | xcopy ${path.normalize(__dirname + "/../output")} ${path.normalize(cwd+'/output')} /E`,
           {
             stdio: "inherit"
           });
