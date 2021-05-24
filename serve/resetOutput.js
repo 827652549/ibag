@@ -202,7 +202,7 @@ module.exports = function(config) {
         )
         break;
       case "win32":
-        console.log('win环境：',`echo a | xcopy ${path.normalize(__dirname + "/../output")} ${path.normalize(cwd+'/output')} /E`);
+        console.log('win32：',`echo d | xcopy ${path.normalize(__dirname + "/../output")} ${path.normalize(cwd+'/output')} /E`);
         //将output输出到程序执行位置
         child_process.execSync(
           `echo d | xcopy ${path.normalize(__dirname + "/../output")} ${path.normalize(cwd+'/output')} /E`,
