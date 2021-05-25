@@ -21,7 +21,6 @@ class ImportBootstrapForVue extends require('./_instruction') {
       addFirstLineContext(
         '../output/src/main.js',
         `import { BootstrapVue } from 'bootstrap-vue'
-import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'\n`
       )
       addStringContext(
