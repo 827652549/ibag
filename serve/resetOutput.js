@@ -121,14 +121,14 @@ const mergeAllInstructions = () => {
  * @returns {Promise<void>}
  */
 const upgraded = async () => {
-  console.log("The dependent version number has been updated to the latest version:", await ncu.run({
+  await ncu.run({
     packageFile: path.normalize(__dirname + "/../output/package.json"),
     upgrade: true,
     // Pass any cli option.
     // Defaults:
     jsonUpgraded: true,
     silent: true
-  }));
+  });
 };
 
 const run = (globalConfig, fun) => {

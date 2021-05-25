@@ -105,8 +105,8 @@ const Home = ()=>{
     axios
       .post("http://localhost:"+port+"/start", config)
       .then(function (res) {
-        console.log("web触发", res)
-        alert('Succeed! Please check if the output folder exists in the current directory.')
+      alert('Succeed! Please check if the output folder exists in the current directory.')
+      console.log("web触发", res)
       })
       .catch(function (err) {
         console.log(err)
