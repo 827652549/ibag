@@ -20,7 +20,8 @@ class ImportReduxImmutable extends require('./_instruction') {
       addItemInPackageJson(
         'dependencies',
         {
-          "redux-immutable": npmPackageVersion["redux-immutable"]
+          "redux-immutable": npmPackageVersion["redux-immutable"],
+          "immutable": npmPackageVersion["immutable"]
         }
       )
     })
