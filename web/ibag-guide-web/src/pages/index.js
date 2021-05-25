@@ -106,6 +106,7 @@ const Home = ()=>{
       .post("http://localhost:"+port+"/start", config)
       .then(function (res) {
         console.log("web触发", res)
+        alert('Succeed! Please check if the output folder exists in the current directory.')
       })
       .catch(function (err) {
         console.log(err)

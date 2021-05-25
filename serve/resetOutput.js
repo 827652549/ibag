@@ -121,7 +121,7 @@ const mergeAllInstructions = () => {
  * @returns {Promise<void>}
  */
 const upgraded = async () => {
-  console.log("npm依赖包更新到最新版：", await ncu.run({
+  console.log("The dependent version number has been updated to the latest version:", await ncu.run({
     packageFile: path.normalize(__dirname + "/../output/package.json"),
     upgrade: true,
     // Pass any cli option.
@@ -170,11 +170,13 @@ module.exports = function(config) {
     cwd:path.normalize(__dirname+"/../")
   })
   console.log('代码已格式化！')
+  console.log('Code formatted！')
 
   //todo：初始化packege.json之后需要做的事情
   run(globalConfig, function() {
     //todo:运行更新完依赖后，需要做的事情：如
     console.log("ibag已为您创建好您的初始化项目。");
+    console.log("ibag has created your initialization project.");
 
     //初始化global.json为默认配置
     fs.writeFileSync(path.normalize(__dirname + "/../configs/global.json"),
@@ -182,7 +184,7 @@ module.exports = function(config) {
       "utf8");
     //执行程序的路径
     let cwd = process.cwd();
-    console.log("执行程序的路径", cwd);
+    // console.log("执行程序的路径", cwd);
 
     //先删除已存在的output目录
     rimraf.sync(path.normalize(cwd + "/output"));
@@ -213,7 +215,8 @@ module.exports = function(config) {
       default:
         throw new Error("系统判断失败，拷贝命令错误");
     }
-    console.log(`您的项目被输出到${path.normalize(cwd+'/output')}目录中，请查收～`);
+    console.log(`请检查${path.normalize(cwd+'/output')}目录，请使用cd进入其中～`);
+    console.log(`Please check ${path.normalize(cwd+'/output')}，and cd in it～`);
   });
 
 };

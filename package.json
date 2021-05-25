@@ -1,7 +1,7 @@
 {
   "name": "ibag",
   "version": "0.0.68",
-  "description": "通用型前端工程化CLI脚手架（暂未开发，先留个坑位）",
+  "description": "A visual, fast, and customizable front-end scaffolding.",
   "main": "index.js",
   "bin": {
     "ibag": "./index.js"

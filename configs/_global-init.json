@@ -1,5 +1,5 @@
 {
-  "isAllNpmPackageVersionLatest": false,
+  "isAllNpmPackageVersionLatest": true,
   "name": "defualt-ibag-name",
   "description": "some description",
   "author": "author name",
