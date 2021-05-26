@@ -1,9 +1,7 @@
 #ibag
+<div align=center><img width="180px" src="./docs/i_bag.png"></div>
 
-<img width="180px" src="i_bag.png">
-
-For full documentation, visit 
-[http://ibag.1heng.top/#/](http://ibag.1heng.top/#/).
+For full documentation, visit [http://ibag.1heng.top/#/](http://ibag.1heng.top/#/).
 
 [English](https://github.com/827652549/ibag)
 [简体中文](./docs/zh-cn/README.md)
