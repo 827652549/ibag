@@ -1,6 +1,6 @@
 {
   "name": "ibag",
-  "version": "0.0.75",
+  "version": "0.0.76",
   "description": "A visual, fast, and customizable front-end scaffolding.",
   "main": "index.js",
   "bin": {
