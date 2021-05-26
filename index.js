@@ -16,8 +16,12 @@ var argv = require('yargs').
       })
     console.log("You can now view the web page for configuration in the browser.");
   }).
-  command('lst [boolean]', 'Do all dependencies use the latest stable version?', function (yargs) {
+  command('lst [isLst]', 'Do all dependencies use the latest stable version?', function (yargs) {
     yargs = yargs.demandCommand(1, '❌ You must add true/false after lst.')
+    yargs.positional('isLst',{
+      type:"boolean",
+      default:true
+    })
     globalJSON.isAllNpmPackageVersionLatest = yargs.argv._[1] === 'true'
     //初始化global.json为默认配置
     fs.writeFileSync(path.normalize(__dirname + "/configs/global.json"),
