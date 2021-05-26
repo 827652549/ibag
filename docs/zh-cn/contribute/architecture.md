@@ -42,7 +42,7 @@
 
 > 简单概括：执行系统命令，触发本地的前端和服务端启动程序。前端根据用户选择将定制内容发送到服务端，后端监听前端的请求，根据定制内容调用相应的"指令"，所有的"指令"都是ibag已在内部实现的"自动化完善代码"的脚本，最后将输出文件拷贝到用户执行目录下。
 
-根目录下的`./index.js`是用yargs实现的cli入口。通过调用node子进程模块执行命令。通过在`./package.json`的`bin`属性里确定好cli名，发布到npm中，即可通过相应的`npm i ibag -g`下载到最新版本，并能直接使用`ibag`命令。
+根目录下的`./index.js`是用yargs实现的cli入口。核心是通过调用node子进程模块执行命令。
 
 当`ibag init`启动时，会触发`concurrently command1 command2`（这里的command1、2是代指，方面下面的描述），`concurrently`能够方便地异步显示两个命令的log信息。`command1`是通过`node`启动`./serve/start.js`的服务端，listen在`./serve/serveConfig.json`相应的端口值。`command2`是通过`npm run`启动`./web/ibag-guide-web`的Web端的导航配置页，由`gatsby serve`启动。
 

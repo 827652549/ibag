@@ -5,7 +5,8 @@ const path = require('path')
 const globalJSON = require('./configs/global.json')
 
 var child_process = require('child_process')
-var argv = require('yargs').
+var argv = require('yargs')
+  .scriptName("ibag").
   command('init', 'Run serve and open a web page for configuration', function (yargs) {
     console.log('Execution：💤')
     //启动后端服务和web
@@ -37,8 +38,7 @@ var argv = require('yargs').
 | | | |_) | | (_| | | (_| |
 |_| |_.__/   \\__,_|  \\__, |
                       __/ |
-                     |___/                                                        
-`).
+                     |___/`).
   usage('欢迎使用ibag,一个可视化的、快速的、可定制化的前端脚手架！').
   usage('Welcome to ibag, a visual, fast, and customizable front-end scaffolding!').
   help('h').
