@@ -1,5 +1,8 @@
-#ibag
-<div align=center><img width="180px" src="./docs/i_bag.png"></div>
+# ibag
+
+<div align=center style="background-color: white">
+<img width="180px" src="https://ibag.oss-cn-beijing.aliyuncs.com/i_bag.png">
+</div>
 
 For full documentation, visit [http://ibag.1heng.top/#/](http://ibag.1heng.top/#/).
 
