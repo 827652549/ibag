@@ -1,5 +1,5 @@
 * **[入门 🚪](zh-cn/README.md)**
-* **[命令 📈️](zh-cn/cli-help.md)**
+* **[命令 🧙](zh-cn/cli-help.md)**
 * **[提示 📈️](zh-cn/tips.md)**
 * **[设计理念 📈️](zh-cn/design.md)**
 * **[FAQ](zh-cn/faq.md)**

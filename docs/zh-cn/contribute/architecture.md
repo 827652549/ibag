@@ -8,8 +8,7 @@
 ├── README.md 
 ├── configs //配置相关
 │   ├── README.MD
-│   ├── _global-init.json //全局配置，global.json的源副本，要和global.json保持一致，脚本中依靠这个文件恢复global.json
-│   ├── global.json
+│   ├── global.json //全局配置，global.json
 │   └── npmPackageVersion.js //npm依赖包稳定版的版本号
 ├── core //抽离的核心函数
 │   ├── config-transform.js //用于配置文件和目录修改的相关函数
