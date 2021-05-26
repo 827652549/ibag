@@ -49,6 +49,6 @@
   },
   "repository": "git://github.com/827652549/ibag.git",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com/827652549"
   }
 }
