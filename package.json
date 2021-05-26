@@ -41,5 +41,9 @@
     "vue"
   ],
   "author": "苏一恒",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:827652549/ibag.git"
+  }
 }
