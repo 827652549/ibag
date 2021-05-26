@@ -4,6 +4,11 @@
 .
 ├── LICENSE //协议
 ├── README.md 
+├── output //默认的输出文件夹
+├── package-lock.json
+├── package.json
+├── index.js //yargs的cli入口
+├── docs //官方文档
 ├── configs //配置相关
 │   ├── README.MD
 │   ├── global.json //全局配置，global.json
@@ -11,8 +16,6 @@
 ├── core //抽离的核心函数
 │   ├── config-transform.js //用于配置文件和目录修改的相关函数
 │   └── context-handle.js //修改文件内容的相关函数
-├── index.js //yargs的cli入口
-├── docs //官方文档
 ├── instructions //封装好的指令集
 │   ├── REAMDE.md
 │   ├── _dependenciesForm.js //指令的依赖关系
@@ -20,9 +23,6 @@
 │   ├── _instruction.js //指令的基类
 │   ├── createDirPage.js //以下都是各个指令
 │   ├── ...
-├── output //默认的输出文件价
-├── package-lock.json
-├── package.json
 ├── serve //服务端，接受web的请求，执行脚本代码
 │   ├── resetOutput.js //封装的处理函数模块
 │   ├── serveConfig.json //服务端相关配置文件
