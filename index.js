@@ -19,7 +19,7 @@ var argv = require('yargs')
     console.log("You can now view the web page for configuration in the browser.");
   }).
   command('lst [isLst]', 'Do all dependencies use the latest stable version?', function (yargs) {
-    yargs = yargs.demandCommand(1, '❌ You must add true/false after lst.')
+    // yargs = yargs.demandCommand(1, '❌ You must add true/false after lst.')
     yargs.positional('isLst',{
       type:"boolean",
       default:true
