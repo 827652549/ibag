@@ -1,8 +1,9 @@
 {
-  "name": "ibag",
+  "name": "@827652549/ibag",
   "version": "0.0.77",
   "description": "A visual, fast, and customizable front-end scaffolding.",
   "main": "index.js",
+  "homepage": "https://github.com/827652549/ibag",
   "bin": {
     "ibag": "./index.js"
   },
@@ -42,8 +43,12 @@
   ],
   "author": "苏一恒",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:827652549/ibag.git"
+  "bugs": {
+    "url": "https://github.com/827652549/ibag/issues",
+    "email": "827652549@qq.com"
+  },
+  "repository": "git://github.com/827652549/ibag.git",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
