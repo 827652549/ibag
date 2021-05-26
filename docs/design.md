@@ -1,0 +1,9 @@
+The main purpose of develop ibag is to allow me to enter the development state faster at the beginning of the development of a new project, instead of looking at the documentation of each library over and over, and then installing and configuring them in the code or directory over and over again.
+
+Fortunately, front-end scaffolds like `create-react-app` or `vue-cli3` already provide a complete construction method, but they are only for their own frameworks to build initial projects. As a Chinese developer, due to various needs, there are many opportunities to get in touch with more framework technologies. So I began to conceive of a "multi-framework, visual" front-end scaffolding tool, while taking into account some ease of expansion, because it is difficult to iterate out a set of content coverage for developers all over the world with only one person's energy Useful mature scaffolding.
+
+At the beginning of ibag design, I have been thinking about how to weigh the balance between "basic presets" and "developer free adjustment". Affected by Giles Colborne's "Simple and Usable Web, Mobile, and Interaction Design", I have Some answers. I try to make ibag able to initialize some basic and simple templates, and then "imitate human behavior" to modify the project structure and code on the basis of the templates. This behavior is run by scripts. Considering that some libraries need to rely on other libraries to modify the catalog first, so each module is independent, and then cleverly implemented a chain call that allows judging dependencies through the inheritance feature of the class, and finally through the script The behavior is automated.
+
+My vision: I hope ibag is a strong seed that will one day grow into a towering tree under the water of more contributors and friends. In the end, it can cover all mainstream development technologies and auxiliary tools.
+
+As for why it is called ibag? It's easy to remember, isn't it? Tribute to Jobs.
