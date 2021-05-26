@@ -2,8 +2,6 @@
 
 const path = require('path')
 
-require('concurrently');
-
 var child_process = require('child_process')
 var argv = require('yargs').
   command('init', 'Run serve and open a web page for configuration', function (yargs) {

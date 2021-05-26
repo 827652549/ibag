@@ -25,7 +25,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prettier": "prettier -w output"
+    "prettier": "prettier -w output",
+    "docs": "npx docsify serve docs"
   },
   "_moduleAliases": {
     "@": "."

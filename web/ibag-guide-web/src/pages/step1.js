@@ -1,6 +1,5 @@
 import Canvas from "../components/canvas"
-import React, { Fragment, useEffect } from "react";
-import { useParams } from "@reach/router";
+import React, { Fragment } from "react";
 
 const Step1 = props => {
   const { onClick, data=[], lang } = props

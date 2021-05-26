@@ -161,6 +161,7 @@ module.exports = function(config) {
 
   const instructionsMap = mergeAllInstructions();
 
+  //根据前端请求依次调用对应的指令
   config.instructions.forEach(e => {
     let currIns = instructionsMap.get(e);
     new currIns();
