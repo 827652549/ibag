@@ -3,7 +3,6 @@ const fs = require("fs");
 
 require("module-alias/register");//注册module-alias
 const globalConfig = require("../configs/global.json");
-const globalConfigInit = require("../configs/_global-init.json");
 const { spliceStringContext, addStringContext, addFirstLineContext, addItemInPackageJson } = require(
   "@/core/context-handle");
 
@@ -179,10 +178,6 @@ module.exports = function(config) {
     console.log("ibag已为您创建好您的初始化项目。");
     console.log("ibag has created your initialization project.");
 
-    //初始化global.json为默认配置
-    fs.writeFileSync(path.normalize(__dirname + "/../configs/global.json"),
-      JSON.stringify(globalConfigInit),
-      "utf8");
     //执行程序的路径
     let cwd = process.cwd();
     // console.log("执行程序的路径", cwd);
