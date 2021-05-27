@@ -1,5 +1,5 @@
 {
-  "name": "/ibag",
+  "name": "ibag",
   "version": "0.0.83",
   "description": "A visual, fast, and customizable front-end scaffolding.",
   "main": "index.js",
