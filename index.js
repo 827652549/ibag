@@ -5,8 +5,8 @@ const fs = require('fs')
 
 const globalJSON = require('./configs/global.json')
 
-var child_process = require('child_process')
-var argv = require('yargs')
+const child_process = require('child_process')
+const argv = require('yargs')
   .scriptName("ibag").
   command('init', 'Run serve and open a web page for configuration', function (yargs) {
     console.log('Execution：💤')
