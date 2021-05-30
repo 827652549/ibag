@@ -1,7 +1,11 @@
 import React, { Fragment, useState } from "react"
 
 const Step4 = props => {
-  const { onClick, data={instructions:[],instructionsName:[],extends:[]}, lang } = props
+  const {
+    onClick,
+    data = { instructions: [], instructionsName: [], extends: [] },
+    lang,
+  } = props
   const languagePackage = {
     title: {
       zh: "第四步: 预生成配置。",

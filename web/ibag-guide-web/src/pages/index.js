@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 import axios from "axios"
-const port = require('../../../../serve/serveConfig.json').port
+const port = require("../../../../serve/serveConfig.json").port
 
 import "tailwindcss/tailwind.css"
 import Step1 from "../pages/step1"
@@ -20,7 +20,7 @@ let config = {
     license: "",
   },
 }
-const Home = ()=>{
+const Home = () => {
   const [json] = useState(json1)
   const names = json.map(e => {
     return e.name
@@ -45,13 +45,10 @@ const Home = ()=>{
         {currStep === 2 && (
           <Step2 data={step2Data} lang={language} onClick={onClickOnStep2} />
         )}
-        {currStep === 3 &&
-        <Step3 lang={language} onClick={onClickOnStep3} />
-        }
+        {currStep === 3 && <Step3 lang={language} onClick={onClickOnStep3} />}
         {currStep === 4 && (
           <Step4 data={step4Data} lang={language} onClick={onClickOnStep4} />
         )}
-
       </div>
       <div
         className="absolute top-1/2 transform -translate-y-1/2 p-3 text-9xl text-gray-400 cursor-pointer hover:text-gray-800"
@@ -75,7 +72,7 @@ const Home = ()=>{
   )
 
   function onClickOnStep1(data) {
-    console.log('step1 click');
+    console.log("step1 click")
     config.type = data
     let result
     json.forEach(e => {
@@ -85,7 +82,6 @@ const Home = ()=>{
     })
     setStep2Data(result)
     setCurrStep(2)
-
   }
 
   function onClickOnStep2(data) {
@@ -103,10 +99,12 @@ const Home = ()=>{
   function onClickOnStep4() {
     console.log(config)
     axios
-      .post("http://localhost:"+port+"/start", config)
+      .post("http://localhost:" + port + "/start", config)
       .then(function (res) {
-      alert('Succeed! Please check if the output folder exists in the current directory.')
-      console.log("web触发", res)
+        alert(
+          "Succeed! Please check if the output folder exists in the current directory."
+        )
+        console.log("web触发", res)
       })
       .catch(function (err) {
         console.log(err)
@@ -122,8 +120,8 @@ const Home = ()=>{
 
   //下一步按钮
   function onClickNextStep() {
-    if (currStep===1){
-      alert('Please select a framework.')
+    if (currStep === 1) {
+      alert("Please select a framework.")
       return
     }
     if (currStep < 4) {
@@ -136,4 +134,4 @@ const Home = ()=>{
   }
 }
 
-export default  Home
+export default Home

@@ -1,25 +1,25 @@
-require('module-alias/register')//注册module-alias
-const { modify } = require('@/core/config-transform')
+require("module-alias/register"); //注册module-alias
+const { modify } = require("@/core/config-transform");
 /**
  * 指令【在page目录下创建页面B】
  */
-class CreatePageB extends require('./_instruction') {
+class CreatePageB extends require("./_instruction") {
   //通过类名，获取到该指令依赖列表文件中到依赖指令
-  constructor (props) {
-    super(props)
-    this.run(function (
-    ) {
+  constructor(props) {
+    super(props);
+    this.run(function () {
       modify(null, [
-        'output', [
-          'src',
+        "output",
+        [
+          "src",
           [
-            'pages',
+            "pages",
             [
-              'B',
+              "B",
               {
-                'filename': 'index',
-                'extension': 'js',
-                'context': `function B(props) {
+                filename: "index",
+                extension: "js",
+                context: `function B(props) {
   return (
     <div>
       page B
@@ -31,13 +31,10 @@ export default B;
 `,
               },
             ],
-
           ],
         ],
-
-      ])
-    })
-
+      ]);
+    });
   }
 }
-module.exports = CreatePageB
+module.exports = CreatePageB;

@@ -1,6 +1,6 @@
 {
   "name": "ibag",
-  "version": "0.0.83",
+  "version": "0.0.85",
   "description": "A visual, fast, and customizable front-end scaffolding.",
   "main": "index.js",
   "homepage": "https://github.com/827652549/ibag",
@@ -47,8 +47,5 @@
     "url": "https://github.com/827652549/ibag/issues",
     "email": "827652549@qq.com"
   },
-  "repository": "https://github.com/827652549/ibag.git",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/827652549"
-  }
+  "repository": "https://github.com/827652549/ibag.git"
 }

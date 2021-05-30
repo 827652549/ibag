@@ -1,10 +1,14 @@
 const rimraf = require("rimraf");
 const fs = require("fs");
 
-require("module-alias/register");//注册module-alias
+require("module-alias/register"); //注册module-alias
 const globalConfig = require("../configs/global.json");
-const { spliceStringContext, addStringContext, addFirstLineContext, addItemInPackageJson } = require(
-  "@/core/context-handle");
+const {
+  spliceStringContext,
+  addStringContext,
+  addFirstLineContext,
+  addItemInPackageJson,
+} = require("@/core/context-handle");
 
 const ncu = require("npm-check-updates");
 // const children_process
@@ -25,12 +29,9 @@ const ImportReduxThunk = require("../instructions/importReduxThunk");
 const ImportReduxSaga = require("../instructions/importReduxSaga");
 const ImportReduxImmutable = require("../instructions/importReduxImmutable");
 const ImportEslintForReact = require("../instructions/importEslintForReact");
-const ImportBootstrapForReact = require(
-  "../instructions/importBootstrapForReact");
-const ImportAntDesignForReact = require(
-  "../instructions/importAntDesignForReact");
-const ImportMaterialForReact = require(
-  "../instructions/importMaterialForReact");
+const ImportBootstrapForReact = require("../instructions/importBootstrapForReact");
+const ImportAntDesignForReact = require("../instructions/importAntDesignForReact");
+const ImportMaterialForReact = require("../instructions/importMaterialForReact");
 const ImportJestForReact = require("../instructions/importJestForReact");
 const ImportMochaForReact = require("../instructions/importMochaForReact");
 const ImportAxiosForReact = require("../instructions/importAxiosForReact");
@@ -58,7 +59,6 @@ const ImportNightWatch = require("../instructions/importNightWatch");
 // let outJson = directory2json('../output/src/pages')
 // fs.writeFileSync('./config.json',JSON.stringify(outJson))
 // console.log(outJson)
-
 
 // console.log(child_process.execSync('npm i'))
 
@@ -126,7 +126,7 @@ const upgraded = async () => {
     // Pass any cli option.
     // Defaults:
     jsonUpgraded: true,
-    silent: true
+    silent: true,
   });
 };
 
@@ -139,14 +139,15 @@ const run = (globalConfig, fun) => {
   }
 };
 
-module.exports = function(config) {
+module.exports = function (config) {
   //重置清空output文件夹
   rimraf.sync(path.normalize(__dirname + "/../output"));
   fs.mkdirSync(path.normalize(__dirname + "/../output"));
   fs.writeFileSync(
     path.normalize(__dirname + "/../instructions/_haveExeced.json"),
     JSON.stringify([]),
-    "utf8");
+    "utf8"
+  );
 
   //将拓展配置写入全局配置@/configs/global.json中
   globalConfig.author = config.extends.author;
@@ -154,27 +155,29 @@ module.exports = function(config) {
   globalConfig.name = config.extends.name;
   globalConfig.license = config.extends.license;
 
-  fs.writeFileSync(path.normalize(__dirname + "/../configs/global.json"),
+  fs.writeFileSync(
+    path.normalize(__dirname + "/../configs/global.json"),
     JSON.stringify(globalConfig),
-    "utf8");
+    "utf8"
+  );
 
   const instructionsMap = mergeAllInstructions();
 
   //根据前端请求依次调用对应的指令
-  config.instructions.forEach(e => {
+  config.instructions.forEach((e) => {
     let currIns = instructionsMap.get(e);
     new currIns();
   });
 
-  child_process.execSync('npm run prettier',{
-    cwd:path.normalize(__dirname+"/../")
-  })
-  console.log('代码已格式化！')
-  console.log('Code formatted！')
+  child_process.execSync("npm run prettier", {
+    cwd: path.normalize(__dirname + "/../"),
+  });
+  console.log("代码已格式化！");
+  console.log("Code formatted！");
 
-  //todo：初始化packege.json之后需要做的事情
-  run(globalConfig, function() {
-    //todo:运行更新完依赖后，需要做的事情：如
+  //初始化packege.json之后需要做的事情
+  run(globalConfig, function () {
+    //运行更新完依赖后，需要做的事情：如
     console.log("ibag已为您创建好您的初始化项目。");
     console.log("ibag has created your initialization project.");
 
@@ -195,24 +198,35 @@ module.exports = function(config) {
           // 为了完成替换，删除再拷贝，是最好的形式。但是rm太危险了，以防万一暂不使用
           `cp -R ${path.normalize(__dirname + "/../output")} ${cwd}`,
           {
-            stdio: "inherit"
+            stdio: "inherit",
           }
-        )
+        );
         break;
       case "win32":
-        console.log('win32：',`echo d | xcopy ${path.normalize(__dirname + "/../output")} ${path.normalize(cwd+'/output')} /E`);
+        console.log(
+          "win32：",
+          `echo d | xcopy ${path.normalize(
+            __dirname + "/../output"
+          )} ${path.normalize(cwd + "/output")} /E`
+        );
         //将output输出到程序执行位置
         child_process.execSync(
-          `echo d | xcopy ${path.normalize(__dirname + "/../output")} ${path.normalize(cwd+'/output')} /E`,
+          `echo d | xcopy ${path.normalize(
+            __dirname + "/../output"
+          )} ${path.normalize(cwd + "/output")} /E`,
           {
-            stdio: "inherit"
-          });
+            stdio: "inherit",
+          }
+        );
         break;
       default:
         throw new Error("系统判断失败，拷贝命令错误");
     }
-    console.log(`请检查${path.normalize(cwd+'/output')}目录，请使用cd进入其中～`);
-    console.log(`Please check ${path.normalize(cwd+'/output')}，and cd in it～`);
+    console.log(
+      `请检查${path.normalize(cwd + "/output")}目录，请使用cd进入其中～`
+    );
+    console.log(
+      `Please check ${path.normalize(cwd + "/output")}，and cd in it～`
+    );
   });
-
 };

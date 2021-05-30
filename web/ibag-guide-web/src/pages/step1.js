@@ -1,8 +1,8 @@
 import Canvas from "../components/canvas"
-import React, { Fragment } from "react";
+import React, { Fragment } from "react"
 
 const Step1 = props => {
-  const { onClick, data=[], lang } = props
+  const { onClick, data = [], lang } = props
   const languagePackage = {
     title: {
       en: "Step1: What project do you want to build？",
