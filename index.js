@@ -59,6 +59,29 @@ const argv = require("yargs")
       );
     }
   )
+.command(
+  "docs",
+  "open the documention web page about ibag.",
+  function (yargs) {
+    console.log("Execution：💤");
+    //启动使用文档网站
+    console.log(
+      "child_process.execSync：",
+      `concurrently --names "Serve,Web" -c "bgBlue.bold,bgMagenta.bold" "node ${path.normalize(
+        __dirname + "/serve/start.js"
+      )}" "npm --prefix ${path.normalize(
+        __dirname + "/web/ibag-guide-web"
+      )} run serve"`
+    );
+    console.log('npm run docs');
+    child_process.execSync(
+      `npm run docs`,
+      {
+        stdio: "inherit",
+      }
+    );
+  }
+)
   .usage(
     `
  _   _                     
