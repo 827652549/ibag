@@ -30,10 +30,8 @@ module.exports = [
             logo: "",
             module: "ImportMaterialForReact",
             description: {
-              zh:
-                "Material-UI是一个简单且可自定义的组件库，用于构建更快，更美观，更易于访问的React应用程序",
-              en:
-                "Material-UI is a simple and customizable component library to build faster, beautiful, and more accessible React applications",
+              zh: "Material-UI是一个简单且可自定义的组件库，用于构建更快，更美观，更易于访问的React应用程序",
+              en: "Material-UI is a simple and customizable component library to build faster, beautiful, and more accessible React applications",
             },
           },
           {
@@ -41,10 +39,8 @@ module.exports = [
             logo: "",
             module: "ImportBootstrapForReact",
             description: {
-              zh:
-                "最受欢迎的HTML，CSS和JavaScript框架，用于在网络上开发响应式，移动优先项目",
-              en:
-                "The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web",
+              zh: "最受欢迎的HTML，CSS和JavaScript框架，用于在网络上开发响应式，移动优先项目",
+              en: "The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web",
             },
           },
         ],
@@ -125,8 +121,7 @@ module.exports = [
             module: "ImportMochaForReact",
             description: {
               zh: "用于node.js和浏览器的简单，灵活，有趣的javascript测试框架",
-              en:
-                "simple, flexible, fun javascript test framework for node.js & the browser",
+              en: "simple, flexible, fun javascript test framework for node.js & the browser",
             },
           },
           {
@@ -153,8 +148,7 @@ module.exports = [
             module: "ImportCypress",
             description: {
               zh: "对浏览器中运行的所有内容进行快速，轻松和可靠的测试",
-              en:
-                "Fast, easy and reliable testing for anything that runs in a browser",
+              en: "Fast, easy and reliable testing for anything that runs in a browser",
             },
           },
           {
@@ -163,8 +157,7 @@ module.exports = [
             module: "ImportNightWatch",
             description: {
               zh: "对浏览器中运行的所有内容进行快速，轻松和可靠的测试",
-              en:
-                "Fast, easy and reliable testing for anything that runs in a browser",
+              en: "Fast, easy and reliable testing for anything that runs in a browser",
             },
           },
         ],
@@ -182,8 +175,7 @@ module.exports = [
             module: "ImportReduxImmutable",
             description: {
               zh: "Javascript的不可变的持久数据集合，其提高效率和简单性",
-              en:
-                "Immutable persistent data collections for Javascript which increase efficiency and simplicity",
+              en: "Immutable persistent data collections for Javascript which increase efficiency and simplicity",
             },
           },
           {
@@ -201,8 +193,7 @@ module.exports = [
             module: "ImportLodash",
             description: {
               zh: "一个现代的JavaScript实用程序库，提供模块化，性能和附加功能",
-              en:
-                "A modern JavaScript utility library delivering modularity, performance, & extras",
+              en: "A modern JavaScript utility library delivering modularity, performance, & extras",
             },
           },
           {
@@ -231,8 +222,7 @@ module.exports = [
     name: "Vue",
     description: {
       zh: "Vue.js是一个渐进的，可逐步采用的JavaScript框架，用于在Web上构建UI。",
-      en:
-        "Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web",
+      en: "Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web",
     },
     module: "InitIbagVue",
     logo: "",
@@ -259,10 +249,8 @@ module.exports = [
             logo: "",
             module: "ImportMaterialForVue",
             description: {
-              zh:
-                "Material-UI是一个简单且可自定义的组件库，用于构建更快，更美观，更易于访问的React应用程序",
-              en:
-                "Material-UI is a simple and customizable component library to build faster, beautiful, and more accessible React applications",
+              zh: "Material-UI是一个简单且可自定义的组件库，用于构建更快，更美观，更易于访问的React应用程序",
+              en: "Material-UI is a simple and customizable component library to build faster, beautiful, and more accessible React applications",
             },
           },
           {
@@ -270,10 +258,8 @@ module.exports = [
             logo: "",
             module: "ImportBootstrapForVue",
             description: {
-              zh:
-                "最受欢迎的HTML，CSS和JavaScript框架，用于在网络上开发响应式，移动优先项目",
-              en:
-                "The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web",
+              zh: "最受欢迎的HTML，CSS和JavaScript框架，用于在网络上开发响应式，移动优先项目",
+              en: "The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web",
             },
           },
         ],
@@ -327,8 +313,7 @@ module.exports = [
             module: "ImportMochaForVue",
             description: {
               zh: "用于node.js和浏览器的简单，灵活，有趣的javascript测试框架",
-              en:
-                "simple, flexible, fun javascript test framework for node.js & the browser",
+              en: "simple, flexible, fun javascript test framework for node.js & the browser",
             },
           },
           {
@@ -355,8 +340,7 @@ module.exports = [
             module: "ImportCypress",
             description: {
               zh: "对浏览器中运行的所有内容进行快速，轻松和可靠的测试",
-              en:
-                "Fast, easy and reliable testing for anything that runs in a browser",
+              en: "Fast, easy and reliable testing for anything that runs in a browser",
             },
           },
           {
@@ -365,8 +349,7 @@ module.exports = [
             module: "ImportNightWatch",
             description: {
               zh: "对浏览器中运行的所有内容进行快速，轻松和可靠的测试",
-              en:
-                "Fast, easy and reliable testing for anything that runs in a browser",
+              en: "Fast, easy and reliable testing for anything that runs in a browser",
             },
           },
         ],
@@ -402,8 +385,7 @@ module.exports = [
             module: "ImportLodash",
             description: {
               zh: "一个现代的JavaScript实用程序库，提供模块化，性能和附加功能",
-              en:
-                "A modern JavaScript utility library delivering modularity, performance, & extras",
+              en: "A modern JavaScript utility library delivering modularity, performance, & extras",
             },
           },
           {
