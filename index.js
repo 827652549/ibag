@@ -61,7 +61,7 @@ const argv = require("yargs")
   )
 .command(
   "docs",
-  "open the documention web page about ibag.",
+  "Open the documention web page about ibag.",
   function (yargs) {
     console.log("Execution：💤");
     //启动使用文档网站
@@ -75,9 +75,10 @@ const argv = require("yargs")
     );
     console.log('npm run docs');
     child_process.execSync(
-      `npm run docs`,
+      `open docs...`,
       {
-        stdio: "inherit",
+        cwd:__dirname,
+        stdio: "inherit"
       }
     );
   }
