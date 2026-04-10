@@ -83,7 +83,7 @@ npm run serve
 ```
 You can also find other script execution methods in `package.json`. For example, if you choose `eslint`, there will be a code formatting command `lint` in the `script` property.
 
-This project is tested with BrowserStack
+This project is tested with BrowserStack.
 
 ### License
 
